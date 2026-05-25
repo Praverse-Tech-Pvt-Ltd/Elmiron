@@ -1,0 +1,11 @@
+﻿{
+  "name": "@pharma/config",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./tailwind.config.base.ts",
+  "exports": {
+    "./tailwind": "./tailwind.config.base.ts",
+    "./tsconfig": "./tsconfig.base.json"
+  }
+}
+

@@ -1,0 +1,7 @@
+﻿{
+  "framework": "nextjs",
+  "buildCommand": "cd ../.. && pnpm build --filter=elmiron",
+  "outputDirectory": "apps/elmiron/.next",
+  "installCommand": "pnpm install"
+}
+

@@ -1,0 +1,117 @@
+﻿import type { Metadata } from 'next'
+import { Nav } from '@/components/Nav'
+import { Footer } from '@/components/Footer'
+import { FormulationCards } from '@/components/FormulationCards'
+
+export const metadata: Metadata = {
+  title: 'Formulations',
+  description:
+    'Elmiron is available in two formulations: oral 100mg capsules and intravesical 50mg/mL solution.',
+}
+
+export default function FormulationsPage() {
+  return (
+    <>
+      <Nav />
+      <main className="pt-20">
+        {/* Hero */}
+        <section className="bg-sage-pale py-24">
+          <div className="max-w-4xl mx-auto px-6">
+            <span className="inline-block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-sage-deep mb-4">
+              Available Formulations
+            </span>
+            <h1 className="font-display text-5xl md:text-6xl font-light text-charcoal leading-tight mb-6">
+              Two routes,<br />
+              <em className="italic text-sage-deep">one goal</em>
+            </h1>
+            <p className="font-body text-lg text-muted font-light leading-relaxed max-w-2xl">
+              Elmiron® is available in two distinct formulations to suit the clinical needs of
+              your patient — oral capsules for systemic convenience, and intravesical solution for
+              direct bladder delivery.
+            </p>
+          </div>
+        </section>
+
+        <FormulationCards />
+
+        {/* Dosing guidelines */}
+        <section className="bg-cream py-20 section-divider">
+          <div className="max-w-4xl mx-auto px-6">
+            <h2 className="font-display text-3xl font-light text-charcoal mb-10">
+              Dosing Guidelines
+            </h2>
+            <div className="space-y-8">
+              <div className="border-l-2 border-sage pl-6">
+                <h3 className="font-display text-xl font-light text-charcoal mb-2">Oral (100mg Capsules)</h3>
+                <p className="font-body text-sm text-muted leading-relaxed font-light mb-3">
+                  <strong className="text-charcoal font-medium">Standard dose:</strong> 100 mg three times daily (300 mg/day total)
+                </p>
+                <p className="font-body text-sm text-muted leading-relaxed font-light mb-3">
+                  <strong className="text-charcoal font-medium">Administration:</strong> Take on empty stomach, at least 1 hour before or 2 hours after meals.
+                </p>
+                <p className="font-body text-sm text-muted leading-relaxed font-light">
+                  <strong className="text-charcoal font-medium">Duration:</strong> Minimum 3–6 months to assess clinical benefit. Long-term use may be required for sustained relief.
+                </p>
+              </div>
+              <div className="border-l-2 border-sage-light pl-6">
+                <h3 className="font-display text-xl font-light text-charcoal mb-2">Intravesical (50mg/mL Solution)</h3>
+                <p className="font-body text-sm text-muted leading-relaxed font-light mb-3">
+                  <strong className="text-charcoal font-medium">Dose:</strong> 40 mL (2,000 mg) per instillation
+                </p>
+                <p className="font-body text-sm text-muted leading-relaxed font-light mb-3">
+                  <strong className="text-charcoal font-medium">Frequency:</strong> Once weekly for 6 weeks (induction), then monthly (maintenance)
+                </p>
+                <p className="font-body text-sm text-muted leading-relaxed font-light">
+                  <strong className="text-charcoal font-medium">Retention:</strong> Patient should retain instillation for minimum 30 minutes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Safety */}
+        <section className="bg-charcoal py-20">
+          <div className="max-w-4xl mx-auto px-6">
+            <h2 className="font-display text-3xl font-light text-white mb-8">
+              Safety & Contraindications
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-body text-[0.7rem] tracking-[0.15em] uppercase text-white/40 mb-4">
+                  Common Side Effects
+                </h3>
+                <ul className="space-y-2">
+                  {['Alopecia (hair loss)', 'Diarrhea', 'Nausea', 'Abdominal pain', 'Retinal pigmentary changes (long-term use)'].map((s) => (
+                    <li key={s} className="flex items-center gap-2">
+                      <span className="w-1 h-1 bg-sage rounded-full flex-none" />
+                      <span className="font-body text-sm text-white/60">{s}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-body text-[0.7rem] tracking-[0.15em] uppercase text-white/40 mb-4">
+                  Contraindications
+                </h3>
+                <ul className="space-y-2">
+                  {['Known hypersensitivity to PPS or heparins', 'Active bleeding disorders', 'Hepatic impairment (use with caution)', 'Pregnancy / lactation (consult PI)', 'Concurrent anticoagulant therapy'].map((s) => (
+                    <li key={s} className="flex items-center gap-2">
+                      <span className="w-1 h-1 bg-sage-light/60 rounded-full flex-none" />
+                      <span className="font-body text-sm text-white/60">{s}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <p className="font-body text-[0.7rem] text-white/20 mt-10 leading-relaxed">
+              This information is a summary only. Please refer to the complete prescribing information
+              for full safety data, drug interactions, and monitoring recommendations. Rx only.
+            </p>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  )
+}
+

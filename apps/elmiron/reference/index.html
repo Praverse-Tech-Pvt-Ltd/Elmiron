@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elmiron | Pentosan Polysulfate Sodium | Rohe Labs</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sage: #8aab8a;
+    --sage-light: #b8cdb8;
+    --sage-pale: #e8f0e8;
+    --sage-deep: #4a7a4a;
+    --cream: #f8f6f1;
+    --white: #ffffff;
+    --charcoal: #2c2c2a;
+    --muted: #6b6b68;
+    --border: rgba(138,171,138,0.25);
+    --transition: 0.35s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(248,246,241,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border);
+    padding: 0 4rem;
+    height: 68px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+    color: var(--charcoal);
+    text-decoration: none;
+    display: flex; align-items: center; gap: 10px;
+  }
+
+  .nav-logo .logo-block {
+    background: var(--sage);
+    color: white;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    font-weight: 500;
+  }
+
+  .nav-links {
+    display: flex; gap: 2.5rem; list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 0.88rem;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    transition: color var(--transition);
+  }
+
+  .nav-links a:hover { color: var(--charcoal); }
+
+  .nav-cta {
+    background: var(--sage);
+    color: white !important;
+    padding: 8px 20px;
+    font-size: 0.82rem !important;
+    letter-spacing: 0.05em !important;
+    transition: background var(--transition) !important;
+  }
+
+  .nav-cta:hover { background: var(--sage-deep) !important; color: white !important; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 68px;
+    overflow: hidden;
+  }
+
+  .hero-left {
+    padding: 8rem 4rem 6rem 6rem;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    color: var(--sage-deep);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--charcoal);
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--sage-deep);
+  }
+
+  .hero-subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-desc {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--muted);
+    max-width: 480px;
+    margin-bottom: 3rem;
+  }
+
+  .hero-badges {
+    display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem;
+  }
+
+  .badge {
+    display: flex; align-items: center; gap: 8px;
+    background: white;
+    border: 0.5px solid var(--border);
+    padding: 8px 16px;
+    font-size: 0.82rem;
+    color: var(--charcoal);
+  }
+
+  .badge-dot {
+    width: 7px; height: 7px;
+    background: var(--sage);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .hero-actions {
+    display: flex; gap: 1rem; align-items: center;
+  }
+
+  .btn-primary {
+    background: var(--sage);
+    color: white;
+    padding: 14px 32px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    border: none; cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background var(--transition);
+  }
+
+  .btn-primary:hover { background: var(--sage-deep); }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--charcoal);
+    padding: 14px 32px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 400;
+    border: 0.5px solid var(--charcoal);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all var(--transition);
+  }
+
+  .btn-ghost:hover { background: var(--charcoal); color: white; }
+
+  .hero-right {
+    background: var(--sage-pale);
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-right::before {
+    content: '';
+    position: absolute;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(138,171,138,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .product-visual {
+    position: relative; z-index: 1;
+    text-align: center;
+  }
+
+  .product-box {
+    width: 220px; height: 300px;
+    background: white;
+    border: 0.5px solid var(--border);
+    display: flex; flex-direction: column;
+    margin: 0 auto 2rem;
+    position: relative;
+    box-shadow: 20px 20px 60px rgba(74,122,74,0.12);
+  }
+
+  .product-box-top {
+    background: var(--sage);
+    height: 40%;
+    display: flex; align-items: flex-end; justify-content: center;
+    padding-bottom: 1rem;
+  }
+
+  .product-rx {
+    font-size: 0.7rem; color: rgba(255,255,255,0.7); position: absolute; top: 12px; left: 12px;
+  }
+
+  .product-name-box {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: white;
+    letter-spacing: 0.02em;
+  }
+
+  .product-box-bottom {
+    padding: 1.2rem;
+    flex: 1;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+
+  .product-generic {
+    font-size: 0.68rem; color: var(--muted); line-height: 1.5;
+  }
+
+  .product-strength {
+    font-size: 1.2rem; font-weight: 500; color: var(--charcoal);
+  }
+
+  .product-count {
+    font-size: 0.7rem; color: var(--muted); border-top: 0.5px solid var(--border); padding-top: 8px; margin-top: 8px;
+  }
+
+  .fda-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: white; border: 0.5px solid var(--sage);
+    padding: 8px 16px; font-size: 0.78rem; font-weight: 500; color: var(--sage-deep);
+  }
+
+  .fda-check { color: var(--sage-deep); font-size: 1rem; }
+
+  /* SECTION SHARED */
+  section { padding: 7rem 6rem; }
+
+  .section-tag {
+    font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--sage-deep);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--charcoal);
+    margin-bottom: 1.5rem;
+  }
+
+  .section-body {
+    font-size: 1rem; line-height: 1.8; color: var(--muted);
+    max-width: 540px;
+  }
+
+  /* ABOUT IC SECTION */
+  .about-ic {
+    background: white;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;
+  }
+
+  .ic-stats {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+    background: var(--border); border: 0.5px solid var(--border);
+    margin-top: 3rem;
+  }
+
+  .stat-cell {
+    background: white;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem; font-weight: 300;
+    color: var(--sage-deep);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.78rem; color: var(--muted); line-height: 1.5;
+  }
+
+  .ic-visual {
+    position: relative;
+  }
+
+  .ic-diagram {
+    background: var(--sage-pale);
+    padding: 3rem;
+    position: relative;
+  }
+
+  .layer-diagram { list-style: none; }
+
+  .layer-item {
+    display: flex; align-items: center; gap: 1.5rem;
+    padding: 1.2rem 0;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .layer-item:last-child { border-bottom: none; }
+
+  .layer-num {
+    width: 32px; height: 32px;
+    background: var(--sage);
+    color: white;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.78rem; font-weight: 500;
+    flex-shrink: 0;
+  }
+
+  .layer-content h4 { font-size: 0.9rem; font-weight: 500; margin-bottom: 4px; }
+  .layer-content p { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+
+  .learn-more-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--sage-deep); text-decoration: none;
+    font-size: 0.88rem; font-weight: 500;
+    margin-top: 2rem;
+    border-bottom: 1px solid transparent;
+    transition: border-color var(--transition);
+  }
+
+  .learn-more-link:hover { border-color: var(--sage-deep); }
+
+  /* MECHANISM */
+  .mechanism {
+    background: var(--cream);
+  }
+
+  .mechanism-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+    background: var(--border);
+    margin-top: 4rem;
+  }
+
+  .mech-card {
+    background: white;
+    padding: 2.5rem 2rem;
+  }
+
+  .mech-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem; font-weight: 300;
+    color: var(--sage-pale);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .mech-title { font-size: 1rem; font-weight: 500; margin-bottom: 0.8rem; }
+  .mech-desc { font-size: 0.86rem; line-height: 1.7; color: var(--muted); }
+
+  /* FORMS */
+  .forms-section {
+    background: white;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;
+  }
+
+  .form-card {
+    border: 0.5px solid var(--border);
+    padding: 2.5rem;
+    position: relative;
+  }
+
+  .form-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--sage);
+  }
+
+  .form-badge {
+    display: inline-block;
+    background: var(--sage-pale);
+    color: var(--sage-deep);
+    font-size: 0.72rem; font-weight: 500;
+    letter-spacing: 0.1em;
+    padding: 4px 12px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  .form-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem; font-weight: 300;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-generic { font-size: 0.82rem; color: var(--muted); margin-bottom: 1.5rem; }
+
+  .form-details { list-style: none; }
+  .form-details li {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 0.9rem 0;
+    border-bottom: 0.5px solid var(--border);
+    font-size: 0.88rem; line-height: 1.5;
+  }
+
+  .form-details li:last-child { border-bottom: none; }
+
+  .detail-label { color: var(--muted); min-width: 80px; font-size: 0.78rem; }
+  .detail-value { color: var(--charcoal); font-weight: 400; }
+
+  /* INDICATIONS */
+  .indications { background: var(--sage-pale); }
+
+  .ind-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .ind-card {
+    background: white;
+    padding: 1.8rem;
+    border: 0.5px solid var(--border);
+    display: flex; align-items: flex-start; gap: 1rem;
+  }
+
+  .ind-icon {
+    width: 36px; height: 36px;
+    background: var(--sage);
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .ind-icon svg { width: 18px; height: 18px; fill: none; stroke: white; stroke-width: 1.5; }
+
+  .ind-name { font-size: 0.92rem; font-weight: 500; margin-bottom: 4px; }
+  .ind-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+
+  /* GLOBAL INITIATIVE */
+  .initiative {
+    background: var(--charcoal);
+    color: white;
+    padding: 7rem 6rem;
+  }
+
+  .initiative .section-tag { color: var(--sage-light); }
+
+  .initiative .section-title { color: white; }
+
+  .initiative .section-body { color: rgba(255,255,255,0.6); max-width: 600px; }
+
+  .init-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    background: rgba(255,255,255,0.1);
+    margin-top: 4rem; margin-bottom: 4rem;
+  }
+
+  .init-cell {
+    background: var(--charcoal);
+    padding: 2.5rem 2rem;
+    border: 0.5px solid rgba(255,255,255,0.08);
+  }
+
+  .init-cell-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem; color: var(--sage-light);
+    letter-spacing: 0.1em; margin-bottom: 1rem;
+  }
+
+  .init-cell h4 { font-size: 0.95rem; font-weight: 500; color: white; margin-bottom: 0.6rem; }
+  .init-cell p { font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.6; }
+
+  .dr-quote {
+    border-left: 2px solid var(--sage);
+    padding-left: 2rem;
+    margin-top: 3rem;
+  }
+
+  .dr-quote blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 300; font-style: italic;
+    color: rgba(255,255,255,0.85); line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .dr-quote cite {
+    font-size: 0.82rem; color: rgba(255,255,255,0.5);
+    font-style: normal; letter-spacing: 0.05em;
+  }
+
+  /* FOOTER */
+  footer {
+    background: white;
+    padding: 4rem 6rem 2rem;
+    border-top: 0.5px solid var(--border);
+  }
+
+  .footer-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 4rem; margin-bottom: 3rem;
+  }
+
+  .footer-brand .logo-block {
+    background: var(--sage); color: white;
+    padding: 4px 8px; font-size: 0.75rem;
+    letter-spacing: 0.12em; font-weight: 500;
+    display: inline-block; margin-bottom: 1rem;
+  }
+
+  .footer-brand p { font-size: 0.85rem; line-height: 1.7; color: var(--muted); max-width: 280px; }
+
+  .footer-col h5 {
+    font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--charcoal);
+    margin-bottom: 1.2rem;
+  }
+
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 0.7rem; }
+  .footer-col ul a {
+    font-size: 0.85rem; color: var(--muted); text-decoration: none;
+    transition: color var(--transition);
+  }
+  .footer-col ul a:hover { color: var(--charcoal); }
+
+  .footer-bottom {
+    border-top: 0.5px solid var(--border);
+    padding-top: 2rem;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+
+  .footer-bottom p { font-size: 0.78rem; color: var(--muted); }
+
+  .footer-contact {
+    display: flex; gap: 2rem;
+  }
+
+  .footer-contact a {
+    font-size: 0.78rem; color: var(--muted); text-decoration: none;
+    transition: color var(--transition);
+  }
+  .footer-contact a:hover { color: var(--sage-deep); }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow { animation: fadeUp 0.7s ease both; }
+  .hero-title { animation: fadeUp 0.7s ease 0.1s both; }
+  .hero-subtitle { animation: fadeUp 0.7s ease 0.15s both; }
+  .hero-desc { animation: fadeUp 0.7s ease 0.2s both; }
+  .hero-badges { animation: fadeUp 0.7s ease 0.25s both; }
+  .hero-actions { animation: fadeUp 0.7s ease 0.3s both; }
+  .product-visual { animation: fadeUp 0.9s ease 0.2s both; }
+
+  @media (max-width: 1024px) {
+    nav { padding: 0 2rem; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-left { padding: 6rem 2rem 4rem; }
+    .hero-right { min-height: 400px; }
+    section { padding: 5rem 2rem; }
+    .about-ic, .forms-section { grid-template-columns: 1fr; gap: 3rem; }
+    .mechanism-grid { grid-template-columns: 1fr; }
+    .init-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .ind-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">
+    <span class="logo-block">ROHE LABS</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about-ic">About IC/BPS</a></li>
+    <li><a href="#mechanism">How It Works</a></li>
+    <li><a href="#forms">Formulations</a></li>
+    <li><a href="#indications">Indications</a></li>
+    <li><a href="missed-bladder.html" class="nav-cta">Missed Bladder Disease</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <p class="hero-eyebrow">FDA Approved · Rohe Labs</p>
+    <h1 class="hero-title">
+      <em>elmiron</em>
+    </h1>
+    <p class="hero-subtitle">Pentosan Polysulfate Sodium 100mg</p>
+    <p class="hero-desc">
+      The only FDA-approved oral therapy for Interstitial Cystitis / Bladder Pain Syndrome. 
+      Designed to replenish the defective GAG layer and restore bladder surface integrity, 
+      comforting life during chronic bladder pain.
+    </p>
+    <div class="hero-badges">
+      <span class="badge"><span class="badge-dot"></span>FDA Approved Oral Drug for IC/BPS</span>
+      <span class="badge"><span class="badge-dot"></span>Adheres to Bladder Surface</span>
+      <span class="badge"><span class="badge-dot"></span>Symptomatic Relief</span>
+    </div>
+    <div class="hero-actions">
+      <a href="#mechanism" class="btn-primary">How It Works</a>
+      <a href="#about-ic" class="btn-ghost">About IC/BPS</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="product-visual">
+      <div class="product-box">
+        <span class="product-rx">Rx</span>
+        <div class="product-box-top">
+          <span class="product-name-box">elmiron</span>
+        </div>
+        <div class="product-box-bottom">
+          <p class="product-generic">Pentosan Polysulfate<br>Sodium Capsules</p>
+          <p class="product-strength">100mg</p>
+          <p class="product-count">90 Capsules</p>
+        </div>
+      </div>
+      <span class="fda-badge">
+        <span class="fda-check">✓</span> FDA Approved
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT IC -->
+<section class="about-ic" id="about-ic">
+  <div>
+    <p class="section-tag">Understanding the Condition</p>
+    <h2 class="section-title">What is IC / Bladder Pain Syndrome?</h2>
+    <p class="section-body">
+      Interstitial Cystitis (IC), also known as Bladder Pain Syndrome (BPS), is a chronic 
+      condition causing bladder pressure, bladder pain, and sometimes pelvic pain. The pain 
+      ranges from mild discomfort to severe, significantly impacting quality of life.
+    </p>
+    <p class="section-body" style="margin-top:1rem;">
+      The condition predominantly affects women and is characterized by a defective GAG 
+      (glycosaminoglycan) layer that normally protects the bladder lining. When compromised, 
+      urinary substances penetrate the bladder wall causing pain and urgency.
+    </p>
+    <a href="missed-bladder.html" class="learn-more-link">
+      Explore full disease information at Missed Bladder Disease →
+    </a>
+
+    <div class="ic-stats">
+      <div class="stat-cell">
+        <div class="stat-number">70%</div>
+        <div class="stat-label">of women may experience bladder sensitivity issues</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-number">3–6</div>
+        <div class="stat-label">months for optimal treatment response</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-number">90%</div>
+        <div class="stat-label">diagnosed patients are women</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-number">1</div>
+        <div class="stat-label">FDA-approved oral drug for IC/BPS</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ic-visual">
+    <p class="section-tag">Bladder Layer Compromise</p>
+    <div class="ic-diagram">
+      <ul class="layer-diagram">
+        <li class="layer-item">
+          <span class="layer-num">1</span>
+          <div class="layer-content">
+            <h4>GAG Layer (Glycosaminoglycan)</h4>
+            <p>Protective mucus layer lining the bladder — defective in IC/BPS patients, allowing irritants to penetrate.</p>
+          </div>
+        </li>
+        <li class="layer-item">
+          <span class="layer-num">2</span>
+          <div class="layer-content">
+            <h4>Urothelium</h4>
+            <p>Transitional epithelial cells exposed to urinary irritants when GAG layer is compromised.</p>
+          </div>
+        </li>
+        <li class="layer-item">
+          <span class="layer-num">3</span>
+          <div class="layer-content">
+            <h4>Suburothelial Layer</h4>
+            <p>Nerve endings and mast cells activated, triggering pain, urgency, and frequency signals.</p>
+          </div>
+        </li>
+        <li class="layer-item">
+          <span class="layer-num">4</span>
+          <div class="layer-content">
+            <h4>Detrusor Muscle</h4>
+            <p>Chronic inflammation can lead to fibrosis and reduced bladder capacity over time.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- MECHANISM -->
+<section class="mechanism" id="mechanism">
+  <p class="section-tag">Mechanism of Action</p>
+  <h2 class="section-title">How Elmiron Works</h2>
+  <p class="section-body">
+    Elmiron (Pentosan Polysulfate Sodium) works through a targeted, multi-step mechanism 
+    to restore bladder health and provide lasting symptomatic relief.
+  </p>
+
+  <div class="mechanism-grid">
+    <div class="mech-card">
+      <div class="mech-num">01</div>
+      <h3 class="mech-title">Supplements the Natural Defective Layer</h3>
+      <p class="mech-desc">
+        Pentosan Polysulfate Sodium mimics the natural GAG layer, providing a synthetic 
+        protective coating to the compromised bladder epithelium, filling gaps in the 
+        defective mucus layer.
+      </p>
+    </div>
+    <div class="mech-card">
+      <div class="mech-num">02</div>
+      <h3 class="mech-title">Adheres to Bladder Surface</h3>
+      <p class="mech-desc">
+        The negatively charged polysulfate molecule has a high affinity for the bladder 
+        urothelium, allowing it to bind and coat the exposed epithelial cells, reducing 
+        penetration of urinary irritants.
+      </p>
+    </div>
+    <div class="mech-card">
+      <div class="mech-num">03</div>
+      <h3 class="mech-title">Replenishes the Defective GAG Layer</h3>
+      <p class="mech-desc">
+        Over time, Elmiron replenishes and restores the glycosaminoglycan layer, rebuilding 
+        the natural barrier function and reducing the hypersensitivity responses that cause 
+        pain, urgency, and frequency.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FORMS -->
+<section class="forms-section" id="forms">
+  <div>
+    <p class="section-tag">Formulations</p>
+    <h2 class="section-title">Two Delivery Pathways</h2>
+    <p class="section-body">
+      Elmiron is available in two complementary formulations — oral capsules for systemic 
+      delivery and intravesical instillation for direct bladder-surface action.
+    </p>
+  </div>
+
+  <div>
+    <div class="form-card" style="margin-bottom:2rem;">
+      <span class="form-badge">Oral</span>
+      <h3 class="form-name">Elmiron Capsules</h3>
+      <p class="form-generic">Pentosan Polysulfate Sodium 100mg</p>
+      <ul class="form-details">
+        <li>
+          <span class="detail-label">Dose</span>
+          <span class="detail-value">1 capsule, 3× daily on empty stomach</span>
+        </li>
+        <li>
+          <span class="detail-label">Duration</span>
+          <span class="detail-value">3–6 months for optimal response</span>
+        </li>
+        <li>
+          <span class="detail-label">Pack</span>
+          <span class="detail-value">90 Capsules per box</span>
+        </li>
+        <li>
+          <span class="detail-label">Status</span>
+          <span class="detail-value">FDA Approved — only oral drug for IC/BPS</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="form-card">
+      <span class="form-badge">Intravesical</span>
+      <h3 class="form-name">Elmiron Instill</h3>
+      <p class="form-generic">Pentosan Polysulfate Sodium Sterile Solution 10mg/ml</p>
+      <ul class="form-details">
+        <li>
+          <span class="detail-label">Method</span>
+          <span class="detail-value">Sterile 8Fr catheter instillation</span>
+        </li>
+        <li>
+          <span class="detail-label">Volume</span>
+          <span class="detail-value">30 mL therapeutic instillation</span>
+        </li>
+        <li>
+          <span class="detail-label">Retention</span>
+          <span class="detail-value">30–60 minutes, then void</span>
+        </li>
+        <li>
+          <span class="detail-label">Frequency</span>
+          <span class="detail-value">Once or twice weekly for 8–12 weeks</span>
+        </li>
+        <li>
+          <span class="detail-label">Preparation</span>
+          <span class="detail-value">8.4% Sodium Bicarbonate (3mL) + 1% Lidocaine (8mL)</span>
+        </li>
+        <li>
+          <span class="detail-label">Status</span>
+          <span class="detail-value">1st in World — CDSCO approved</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- INDICATIONS -->
+<section class="indications" id="indications">
+  <p class="section-tag">Clinical Applications</p>
+  <h2 class="section-title">Also Effective In</h2>
+  <p class="section-body">
+    Beyond IC/BPS, Elmiron demonstrates efficacy across a range of bladder conditions 
+    where the GAG layer is compromised or urothelial damage is involved.
+  </p>
+
+  <div class="ind-grid">
+    <div class="ind-card">
+      <div class="ind-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+      </div>
+      <div>
+        <p class="ind-name">Recurrent UTI</p>
+        <p class="ind-desc">Restoration of GAG layer helps reduce frequency of recurrent urinary tract infections.</p>
+      </div>
+    </div>
+    <div class="ind-card">
+      <div class="ind-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+      </div>
+      <div>
+        <p class="ind-name">Hemorrhagic Cystitis</p>
+        <p class="ind-desc">Supports mucosal repair in hemorrhagic cystitis, reducing inflammation and bleeding.</p>
+      </div>
+    </div>
+    <div class="ind-card">
+      <div class="ind-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+      </div>
+      <div>
+        <p class="ind-name">Radiation Cystitis</p>
+        <p class="ind-desc">Palliative management of radiation-induced bladder damage and chronic cystitis symptoms.</p>
+      </div>
+    </div>
+    <div class="ind-card">
+      <div class="ind-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+      </div>
+      <div>
+        <p class="ind-name">BCG Induced Cystitis</p>
+        <p class="ind-desc">Adjunctive management of cystitis following BCG immunotherapy for bladder cancer.</p>
+      </div>
+    </div>
+    <div class="ind-card">
+      <div class="ind-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+      </div>
+      <div>
+        <p class="ind-name">Cyclophosphamide Induced Cystitis</p>
+        <p class="ind-desc">Bladder protection and repair following cyclophosphamide chemotherapy-induced damage.</p>
+      </div>
+    </div>
+    <div class="ind-card">
+      <div class="ind-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+      </div>
+      <div>
+        <p class="ind-name">Neurogenic Bladder</p>
+        <p class="ind-desc">Mucosal support in neurogenic bladder conditions where normal barrier function is impaired.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GLOBAL INITIATIVE -->
+<section class="initiative" id="initiative">
+  <p class="section-tag">Global Initiative</p>
+  <h2 class="section-title">Women's Bladder Health —<br>A Global Mission</h2>
+  <p class="section-body">
+    Led by Dr. Sanjay Pandey in collaboration with Rohe Labs, our initiative focuses on 
+    bladder sensitivity, pain, and overlooked urinary symptoms in women, working towards 
+    global standards of care.
+  </p>
+
+  <div class="init-grid">
+    <div class="init-cell">
+      <p class="init-cell-num">Focus 01</p>
+      <h4>Early Intervention</h4>
+      <p>Identifying bladder pain triggers before they progress to chronic pelvic conditions.</p>
+    </div>
+    <div class="init-cell">
+      <p class="init-cell-num">Focus 02</p>
+      <h4>Step-wise Management</h4>
+      <p>Building evidence-based, practical management protocols for gynaecologists.</p>
+    </div>
+    <div class="init-cell">
+      <p class="init-cell-num">Focus 03</p>
+      <h4>Prevention of Chronicity</h4>
+      <p>Stopping the progression from acute sensitivity to chronic bladder conditions.</p>
+    </div>
+    <div class="init-cell">
+      <p class="init-cell-num">Focus 04</p>
+      <h4>Global Working Principles</h4>
+      <p>Developing consensus guidelines for bladder health across international practices.</p>
+    </div>
+    <div class="init-cell">
+      <p class="init-cell-num">Focus 05</p>
+      <h4>Specialist Education</h4>
+      <p>Round tables and invitation-only forums bringing together global specialists.</p>
+    </div>
+    <div class="init-cell">
+      <p class="init-cell-num">Focus 06</p>
+      <h4>Overlooked Symptoms</h4>
+      <p>Addressing persistent burning, dysuria, suprapubic pain as serious clinical signs.</p>
+    </div>
+  </div>
+
+  <div class="dr-quote">
+    <blockquote>
+      "The reasonable man adapts himself to the world; the unreasonable one persists in trying 
+      to adapt the world to himself. Therefore, all progress depends on the unreasonable man."
+    </blockquote>
+    <cite>— Team BladderHealthWomen, Rohe Labs</cite>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="logo-block">ROHE LABS</span>
+      <p>Comforting life during IC / Bladder Pain Syndrome. Committed to women's bladder health globally.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Product</h5>
+      <ul>
+        <li><a href="#mechanism">How It Works</a></li>
+        <li><a href="#forms">Formulations</a></li>
+        <li><a href="#indications">Indications</a></li>
+        <li><a href="#about-ic">About IC/BPS</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Disease Info</h5>
+      <ul>
+        <li><a href="missed-bladder.html">Missed Bladder Disease</a></li>
+        <li><a href="missed-bladder.html#symptoms">Symptoms</a></li>
+        <li><a href="missed-bladder.html#diagnosis">Diagnosis</a></li>
+        <li><a href="missed-bladder.html#treatment">Treatment</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Initiative</h5>
+      <ul>
+        <li><a href="#initiative">Global Mission</a></li>
+        <li><a href="missed-bladder.html#roundtable">Round Table</a></li>
+        <li><a href="mailto:isshane.guptaa@rohelabs.com">Contact</a></li>
+        <li><a href="https://rohelabs.com/elmiron">rohelabs.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Rohe Labs. Prescription drug. For professional use only.</p>
+    <div class="footer-contact">
+      <a href="mailto:isshane.guptaa@rohelabs.com">isshane.guptaa@rohelabs.com</a>
+      <a href="tel:+918097253466">+91 80972 53466</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

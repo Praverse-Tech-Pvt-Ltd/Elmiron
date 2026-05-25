@@ -1,0 +1,105 @@
+﻿import type { Metadata } from 'next'
+import { Nav } from '@/components/Nav'
+import { Footer } from '@/components/Footer'
+import { MechanismGrid } from '@/components/MechanismGrid'
+
+export const metadata: Metadata = {
+  title: 'Mechanism of Action',
+  description:
+    'How Elmiron (Pentosan Polysulfate Sodium) works to restore the bladder GAG layer and relieve IC/BPS symptoms.',
+}
+
+const pathophysiologyPoints = [
+  {
+    title: 'Defective Urothelium',
+    body: 'In IC/BPS, the urothelial glycosaminoglycan (GAG) layer is damaged, allowing urinary solutes to penetrate the bladder wall, triggering inflammation and pain.',
+  },
+  {
+    title: 'Mast Cell Activation',
+    body: 'Submucosally, mast cells release histamine and other inflammatory mediators, perpetuating the pain-inflammation cycle and causing detrusor muscle irritability.',
+  },
+  {
+    title: 'Neural Sensitization',
+    body: 'Chronic inflammation sensitizes bladder afferent nerves, leading to central sensitization and amplified pain perception — hallmarks of IC/BPS.',
+  },
+]
+
+export default function HowItWorksPage() {
+  return (
+    <>
+      <Nav />
+      <main className="pt-20">
+        {/* Hero */}
+        <section className="bg-sage-pale py-24">
+          <div className="max-w-4xl mx-auto px-6">
+            <span className="inline-block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-sage-deep mb-4">
+              Mechanism of Action
+            </span>
+            <h1 className="font-display text-5xl md:text-6xl font-light text-charcoal leading-tight mb-6">
+              How Elmiron<sup className="text-[0.4em] text-muted ml-1">®</sup> works
+            </h1>
+            <p className="font-body text-lg text-muted font-light leading-relaxed max-w-2xl">
+              Elmiron (Pentosan Polysulfate Sodium) is a semi-synthetic heparin analog that acts
+              locally on the bladder urothelium to restore the protective GAG layer, reduce
+              inflammation, and break the IC/BPS pain cycle.
+            </p>
+          </div>
+        </section>
+
+        {/* Pathophysiology */}
+        <section className="bg-cream py-20 section-divider">
+          <div className="max-w-6xl mx-auto px-6">
+            <h2 className="font-display text-3xl font-light text-charcoal mb-10">
+              Understanding IC/BPS Pathophysiology
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {pathophysiologyPoints.map((point, i) => (
+                <div key={point.title} className="bg-white p-8 border border-sage/20">
+                  <span className="font-body text-[0.6rem] tracking-[0.15em] uppercase text-sage-deep/60 mb-3 block">
+                    0{i + 1}
+                  </span>
+                  <h3 className="font-display text-xl font-light text-charcoal mb-3">{point.title}</h3>
+                  <p className="font-body text-sm text-muted leading-relaxed font-light">{point.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <MechanismGrid />
+
+        {/* Pharmacokinetics */}
+        <section className="bg-sage-pale py-20 section-divider">
+          <div className="max-w-4xl mx-auto px-6">
+            <h2 className="font-display text-3xl font-light text-charcoal mb-8">
+              Pharmacokinetics
+            </h2>
+            <dl className="space-y-4">
+              {[
+                { term: 'Absorption', def: 'Poorly absorbed orally (~3–6%). Local action on urothelium is the primary mechanism.' },
+                { term: 'Distribution', def: 'Distributed primarily to the urothelium and liver. Binds to GAG-deficient areas of the bladder wall.' },
+                { term: 'Metabolism', def: 'Hepatic desulfation and depolymerization. Excreted primarily in urine and feces.' },
+                { term: 'Elimination', def: 'Half-life approximately 4.8 hours after oral dosing. Urinary excretion ~6% of dose.' },
+                { term: 'Onset', def: 'Clinical improvement typically observed at 3–6 months of continuous therapy.' },
+              ].map((item) => (
+                <div
+                  key={item.term}
+                  className="flex flex-col md:flex-row md:gap-8 pb-4 border-b border-sage/15"
+                >
+                  <dt className="font-body text-[0.72rem] font-medium tracking-[0.12em] uppercase text-charcoal w-32 flex-none mb-1 md:mb-0">
+                    {item.term}
+                  </dt>
+                  <dd className="font-body text-sm text-muted leading-relaxed font-light">
+                    {item.def}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  )
+}
+

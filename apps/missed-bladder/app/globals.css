@@ -1,0 +1,45 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-cream: #f8f6f1;
+  --color-charcoal: #2c2c2a;
+  --color-sage: #8aab8a;
+  --color-sage-light: #b8cdb8;
+  --color-sage-pale: #e8f0e8;
+  --color-sage-deep: #4a7a4a;
+  --color-muted: #6b6b68;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-charcoal font-body antialiased;
+    font-weight: 300;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-light;
+  }
+}
+
+@layer components {
+  .section-divider {
+    border-top: 0.5px solid rgba(138, 171, 138, 0.25);
+  }
+
+  .disclaimer-bar {
+    @apply bg-charcoal text-white/60 text-[0.7rem] text-center py-2 tracking-wide;
+  }
+
+  /* Treatment ladder active state */
+  .ladder-item-active {
+    border-left: 2px solid #8aab8a;
+    color: #2c2c2a;
+  }
+}
+

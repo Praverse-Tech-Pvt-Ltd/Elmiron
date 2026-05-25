@@ -1,0 +1,7 @@
+﻿{
+  "framework": "nextjs",
+  "buildCommand": "cd ../.. && pnpm build --filter=missed-bladder",
+  "outputDirectory": "apps/missed-bladder/.next",
+  "installCommand": "pnpm install"
+}
+
