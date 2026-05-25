@@ -75,14 +75,17 @@ export function Footer() {
             © {new Date().getFullYear()} Swati Pentose Pvt Ltd. All rights reserved.
           </p>
           <div className="font-body text-[0.7rem] text-white/30 leading-relaxed">
+            <a href="mailto:elmiron@elmiron.in" className="block hover:text-white transition-colors">
+              Medical Affairs · elmiron@elmiron.in
+            </a>
             <a href="mailto:v@v-group.in" className="block hover:text-white transition-colors">
-              Vishal Jajodia · v@v-group.in
+              CC: Vishal Jajodia · v@v-group.in
             </a>
             <a
               href="mailto:isshane.guptaa@swatispentose.com"
               className="block hover:text-white transition-colors"
             >
-              Isshane Guptaa · isshane.guptaa@swatispentose.com
+              CC: Isshane Guptaa · isshane.guptaa@swatispentose.com
             </a>
           </div>
         </div>

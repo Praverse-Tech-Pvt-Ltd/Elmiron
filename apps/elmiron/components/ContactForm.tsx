@@ -16,6 +16,10 @@ type FormData = z.infer<typeof schema>
 
 const contacts = [
   {
+    name: 'Medical Affairs',
+    email: 'elmiron@elmiron.in',
+  },
+  {
     name: 'Vishal Jajodia',
     email: 'v@v-group.in',
   },
@@ -67,7 +71,7 @@ export function ContactForm() {
           For product enquiries, prescribing information, or medical information requests.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
           {contacts.map((contact) => (
             <a
               key={contact.email}
@@ -152,10 +156,14 @@ export function ContactForm() {
             {status === 'error' && (
               <div className="font-body text-[0.7rem] text-red-400 leading-relaxed">
                 Something went wrong. Please email{' '}
+                <a href="mailto:elmiron@elmiron.in" className="underline underline-offset-2">
+                  elmiron@elmiron.in
+                </a>{' '}
+                and copy{' '}
                 <a href="mailto:v@v-group.in" className="underline underline-offset-2">
                   v@v-group.in
                 </a>{' '}
-                or{' '}
+                /{' '}
                 <a
                   href="mailto:isshane.guptaa@swatispentose.com"
                   className="underline underline-offset-2"
