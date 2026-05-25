@@ -1,7 +1,7 @@
 ﻿{
   "framework": "nextjs",
-  "buildCommand": "cd ../.. && pnpm build --filter=elmiron",
+  "buildCommand": "cd ../.. && pnpm --filter elmiron build",
   "outputDirectory": "apps/elmiron/.next",
-  "installCommand": "pnpm install"
+  "installCommand": "cd ../.. && pnpm install --frozen-lockfile"
 }
 

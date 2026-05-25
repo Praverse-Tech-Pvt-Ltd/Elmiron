@@ -1,7 +1,7 @@
 ﻿{
   "framework": "nextjs",
-  "buildCommand": "cd ../.. && pnpm build --filter=missed-bladder",
+  "buildCommand": "cd ../.. && pnpm --filter missed-bladder build",
   "outputDirectory": "apps/missed-bladder/.next",
-  "installCommand": "pnpm install"
+  "installCommand": "cd ../.. && pnpm install --frozen-lockfile"
 }
 

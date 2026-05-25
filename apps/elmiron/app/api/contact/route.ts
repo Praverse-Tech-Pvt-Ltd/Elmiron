@@ -8,6 +8,9 @@ const schema = z.object({
   message: z.string().min(10),
 })
 
+const fromEmail = process.env.RESEND_FROM_EMAIL ?? 'onboarding@resend.dev'
+const contactEmail = process.env.CONTACT_EMAIL ?? 'contact@elmiron.com'
+
 export async function POST(req: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY)
   try {
@@ -15,8 +18,8 @@ export async function POST(req: Request) {
     const data = schema.parse(body)
 
     await resend.emails.send({
-      from: 'website@elmiron.com',
-      to: process.env.CONTACT_EMAIL ?? 'contact@elmiron.com',
+      from: fromEmail,
+      to: contactEmail,
       reply_to: data.email,
       subject: `New enquiry from ${data.name} — Elmiron Website`,
       html: `
