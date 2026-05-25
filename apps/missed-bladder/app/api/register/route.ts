@@ -1,4 +1,4 @@
-﻿import { Resend } from 'resend'
+import { Resend } from 'resend'
 import { z } from 'zod'
 
 const schema = z.object({
@@ -15,20 +15,6 @@ export async function POST(req: Request) {
   try {
     const body = await req.json()
     const data = schema.parse(body)
-
-    // Save to Supabase if configured
-    if (process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.SUPABASE_SERVICE_KEY) {
-      const { createClient } = await import('@supabase/supabase-js')
-      const supabase = createClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL,
-        process.env.SUPABASE_SERVICE_KEY
-      )
-      await supabase.from('registrations').insert({
-        ...data,
-        event_id: 'roundtable-2026',
-        status: 'pending',
-      })
-    }
 
     await resend.emails.send({
       from: 'events@elmiron.com',
@@ -50,4 +36,3 @@ export async function POST(req: Request) {
     return Response.json({ success: false }, { status: 500 })
   }
 }
-

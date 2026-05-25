@@ -3,7 +3,6 @@ import { Nav } from '@/components/Nav'
 import { Footer } from '@/components/Footer'
 import { ProductCTA } from '@/components/ProductCTA'
 
-// Static params for build — extend with Sanity when connected
 export async function generateStaticParams() {
   return [
     { slug: 'interstitial-cystitis' },
@@ -25,7 +24,6 @@ export async function generateMetadata({
   }
 }
 
-// Static content map (replace with Sanity fetch when connected)
 const conditionContent: Record<string, {
   name: string
   category: string

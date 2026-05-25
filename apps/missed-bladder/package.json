@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "missed-bladder",
   "version": "0.1.0",
   "private": true,
@@ -13,13 +13,10 @@
     "react": "^18",
     "react-dom": "^18",
     "framer-motion": "^11.3.0",
-    "@sanity/client": "^6.21.0",
-    "groq": "^3.7.0",
     "react-hook-form": "^7.52.1",
     "@hookform/resolvers": "^3.9.0",
     "zod": "^3.23.8",
     "resend": "^3.4.0",
-    "@supabase/supabase-js": "^2.44.4",
     "@pharma/ui": "workspace:*",
     "@pharma/config": "workspace:*"
   },
@@ -35,4 +32,3 @@
     "eslint-config-next": "14.2.5"
   }
 }
-

@@ -12,7 +12,6 @@ interface IndicationsGridProps {
   indications?: Indication[]
 }
 
-// Fallback static data if Sanity not connected
 const defaultIndications: Indication[] = [
   {
     name: 'Interstitial Cystitis / BPS',
