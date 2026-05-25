@@ -19,7 +19,7 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Elmiron | Pentosan Polysulfate Sodium | ',
+    default: 'Elmiron',
     template: '%s | Elmiron',
   },
   description:
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://elmiron.com',
-    siteName: 'Elmiron ',
+    url: 'https://elmiron.in',
+    siteName: 'Elmiron',
   },
 }
 
