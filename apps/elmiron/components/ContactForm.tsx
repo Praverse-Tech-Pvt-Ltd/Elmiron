@@ -123,7 +123,7 @@ export function ContactForm() {
 
             {status === 'error' && (
               <p className="font-body text-[0.7rem] text-red-400">
-                Something went wrong. Please try again or email contact@elmiron.com
+                Something went wrong. Please try again or email elmiron@elmiron.in
               </p>
             )}
 

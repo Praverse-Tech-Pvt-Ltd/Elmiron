@@ -75,7 +75,7 @@ export function Footer() {
             © {new Date().getFullYear()} The Company All rights reserved.
           </p>
           <p className="font-body text-[0.7rem] text-white/20">
-            contact@elmiron.com
+            elmiron@elmiron.in
           </p>
         </div>
       </div>

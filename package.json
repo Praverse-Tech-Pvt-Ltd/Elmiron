@@ -6,8 +6,7 @@
     "dev": "turbo run dev",
     "build": "turbo run build",
     "lint": "turbo run lint",
-    "dev:elmiron": "turbo run dev --filter=elmiron",
-    "dev:missed-bladder": "turbo run dev --filter=missed-bladder"
+    "dev:elmiron": "turbo run dev --filter=elmiron"
   },
   "devDependencies": {
     "next": "14.2.5",
