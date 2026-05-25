@@ -15,7 +15,7 @@ export function Footer() {
               Interstitial Cystitis / Bladder Pain Syndrome.
             </p>
             <p className="font-body text-[0.7rem] text-white/30 tracking-wide uppercase">
-              Manufactured by The Company
+              Manufactured by Swati Pentose Pvt Ltd
             </p>
           </div>
 
@@ -72,11 +72,19 @@ export function Footer() {
           <p className="font-body text-[0.7rem] text-white/30 leading-relaxed max-w-2xl">
             Rx only. For use by licensed healthcare professionals only. This material is intended for
             healthcare professionals in India. Please refer to the full prescribing information.
-            © {new Date().getFullYear()} The Company All rights reserved.
+            © {new Date().getFullYear()} Swati Pentose Pvt Ltd. All rights reserved.
           </p>
-          <p className="font-body text-[0.7rem] text-white/20">
-            elmiron@elmiron.in
-          </p>
+          <div className="font-body text-[0.7rem] text-white/30 leading-relaxed">
+            <a href="mailto:v@v-group.in" className="block hover:text-white transition-colors">
+              Vishal Jajodia · v@v-group.in
+            </a>
+            <a
+              href="mailto:isshane.guptaa@swatispentose.com"
+              className="block hover:text-white transition-colors"
+            >
+              Isshane Guptaa · isshane.guptaa@swatispentose.com
+            </a>
+          </div>
         </div>
       </div>
     </footer>

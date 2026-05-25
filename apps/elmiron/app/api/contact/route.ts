@@ -9,9 +9,28 @@ const schema = z.object({
 })
 
 const fromEmail = process.env.RESEND_FROM_EMAIL ?? 'onboarding@resend.dev'
-const contactEmail = process.env.CONTACT_EMAIL ?? 'elmiron@elmiron.in'
+const contactEmails = (process.env.CONTACT_EMAILS ?? process.env.CONTACT_EMAIL ?? 'v@v-group.in,isshane.guptaa@swatispentose.com')
+  .split(',')
+  .map((email) => email.trim())
+  .filter(Boolean)
+
+function escapeHtml(value: string) {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;')
+}
 
 export async function POST(req: Request) {
+  if (!process.env.RESEND_API_KEY) {
+    return Response.json(
+      { success: false, error: 'Contact form is not configured' },
+      { status: 503 },
+    )
+  }
+
   const resend = new Resend(process.env.RESEND_API_KEY)
   try {
     const body = await req.json()
@@ -19,18 +38,18 @@ export async function POST(req: Request) {
 
     await resend.emails.send({
       from: fromEmail,
-      to: contactEmail,
+      to: contactEmails,
       reply_to: data.email,
       subject: `New enquiry from ${data.name} — Elmiron Website`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px;">
           <h2 style="color: #2c2c2a;">New Contact Enquiry — Elmiron</h2>
-          <p><strong>Name:</strong> ${data.name}</p>
-          <p><strong>Email:</strong> ${data.email}</p>
-          <p><strong>Phone:</strong> ${data.phone ?? 'Not provided'}</p>
+          <p><strong>Name:</strong> ${escapeHtml(data.name)}</p>
+          <p><strong>Email:</strong> ${escapeHtml(data.email)}</p>
+          <p><strong>Phone:</strong> ${escapeHtml(data.phone ?? 'Not provided')}</p>
           <hr style="border: none; border-top: 1px solid #e8f0e8; margin: 16px 0;" />
           <p><strong>Message:</strong></p>
-          <p style="color: #6b6b68;">${data.message}</p>
+          <p style="color: #6b6b68;">${escapeHtml(data.message)}</p>
         </div>
       `,
     })

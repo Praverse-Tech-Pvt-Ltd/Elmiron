@@ -14,6 +14,17 @@ const schema = z.object({
 
 type FormData = z.infer<typeof schema>
 
+const contacts = [
+  {
+    name: 'Vishal Jajodia',
+    email: 'v@v-group.in',
+  },
+  {
+    name: 'Isshane Guptaa',
+    email: 'isshane.guptaa@swatispentose.com',
+  },
+]
+
 export function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
 
@@ -55,6 +66,23 @@ export function ContactForm() {
         <p className="font-body text-sm text-white/50 mb-10 font-light">
           For product enquiries, prescribing information, or medical information requests.
         </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+          {contacts.map((contact) => (
+            <a
+              key={contact.email}
+              href={`mailto:${contact.email}`}
+              className="block border border-white/10 bg-white/5 p-5 hover:border-sage/50 transition-colors"
+            >
+              <span className="block font-display text-xl font-light text-white mb-1">
+                {contact.name}
+              </span>
+              <span className="block font-body text-sm text-sage-light break-all">
+                {contact.email}
+              </span>
+            </a>
+          ))}
+        </div>
 
         {status === 'success' ? (
           <div className="border border-sage/40 bg-sage/10 p-8 text-center">
@@ -122,9 +150,20 @@ export function ContactForm() {
             </div>
 
             {status === 'error' && (
-              <p className="font-body text-[0.7rem] text-red-400">
-                Something went wrong. Please try again or email elmiron@elmiron.in
-              </p>
+              <div className="font-body text-[0.7rem] text-red-400 leading-relaxed">
+                Something went wrong. Please email{' '}
+                <a href="mailto:v@v-group.in" className="underline underline-offset-2">
+                  v@v-group.in
+                </a>{' '}
+                or{' '}
+                <a
+                  href="mailto:isshane.guptaa@swatispentose.com"
+                  className="underline underline-offset-2"
+                >
+                  isshane.guptaa@swatispentose.com
+                </a>
+                .
+              </div>
             )}
 
             <button
