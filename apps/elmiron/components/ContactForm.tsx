@@ -19,14 +19,6 @@ const contacts = [
     name: 'Medical Affairs',
     email: 'elmiron@elmiron.in',
   },
-  {
-    name: 'Vishal Jajodia',
-    email: 'v@v-group.in',
-  },
-  {
-    name: 'Isshane Guptaa',
-    email: 'isshane.guptaa@swatispentose.com',
-  },
 ]
 
 export function ContactForm() {
@@ -71,7 +63,7 @@ export function ContactForm() {
           For product enquiries, prescribing information, or medical information requests.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+        <div className="grid grid-cols-1 gap-4 mb-10">
           {contacts.map((contact) => (
             <a
               key={contact.email}
@@ -158,17 +150,6 @@ export function ContactForm() {
                 Something went wrong. Please email{' '}
                 <a href="mailto:elmiron@elmiron.in" className="underline underline-offset-2">
                   elmiron@elmiron.in
-                </a>{' '}
-                and copy{' '}
-                <a href="mailto:v@v-group.in" className="underline underline-offset-2">
-                  v@v-group.in
-                </a>{' '}
-                /{' '}
-                <a
-                  href="mailto:isshane.guptaa@swatispentose.com"
-                  className="underline underline-offset-2"
-                >
-                  isshane.guptaa@swatispentose.com
                 </a>
                 .
               </div>

@@ -10,10 +10,6 @@ const schema = z.object({
 
 const fromEmail = process.env.RESEND_FROM_EMAIL ?? 'onboarding@resend.dev'
 const contactEmail = process.env.CONTACT_EMAIL ?? 'elmiron@elmiron.in'
-const ccEmails = (process.env.CONTACT_CC_EMAILS ?? 'v@v-group.in,isshane.guptaa@swatispentose.com')
-  .split(',')
-  .map((email) => email.trim())
-  .filter(Boolean)
 
 function escapeHtml(value: string) {
   return value
@@ -40,7 +36,6 @@ export async function POST(req: Request) {
     await resend.emails.send({
       from: fromEmail,
       to: contactEmail,
-      cc: ccEmails,
       reply_to: data.email,
       subject: `New enquiry from ${data.name} — Elmiron Website`,
       html: `

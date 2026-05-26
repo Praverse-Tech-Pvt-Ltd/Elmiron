@@ -35,12 +35,12 @@ export function InitiativeSection() {
               across India.
             </p>
             <a
-              href="https://missedbladder.com"
+              href="https://missedbladderdisease.com"
               target="_blank"
               rel="noopener noreferrer"
               className="font-body text-sm px-6 py-3 bg-sage text-white hover:bg-sage-deep border border-sage hover:border-sage-deep transition-colors tracking-wide inline-block"
             >
-              Visit missedbladder.com ↗
+              Visit missedbladderdisease.com ↗
             </a>
           </div>
 
