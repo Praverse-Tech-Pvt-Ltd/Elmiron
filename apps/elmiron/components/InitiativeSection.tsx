@@ -31,7 +31,7 @@ export function InitiativeSection() {
             </p>
             <p className="font-body text-base text-muted leading-relaxed mb-8 font-light">
               Led by Dr. Sanjay Pandey, the Missed Bladder Disease initiative is closing this gap
-              through physician education, diagnostic frameworks, and specialist round tables
+              through physician education and GIBBS-guided diagnostic frameworks
               across India.
             </p>
             <a

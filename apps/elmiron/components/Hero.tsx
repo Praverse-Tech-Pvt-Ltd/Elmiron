@@ -43,16 +43,23 @@ export function Hero() {
 
           <motion.p
             variants={fadeUp}
-            className="font-body text-base text-muted leading-relaxed mb-4 max-w-md font-light"
+            className="font-body text-base text-muted leading-relaxed mb-2 max-w-md font-light"
           >
-            Pentosan Polysulfate Sodium 100 mg — the only FDA-approved oral medication
-            for Interstitial Cystitis / Bladder Pain Syndrome (IC/BPS).
+            Pentosan Polysulfate Sodium 100 mg — India's only oral therapy
+            approved for Interstitial Cystitis / Bladder Pain Syndrome (IC/BPS).
+          </motion.p>
+
+          <motion.p
+            variants={fadeUp}
+            className="font-body text-sm text-sage-deep leading-relaxed mb-4 max-w-md font-medium"
+          >
+            Now accessible and affordable across India — prescribed by leading urologists.
           </motion.p>
 
           {/* Badges */}
           <motion.div variants={fadeUp} className="flex flex-wrap gap-2 mb-8">
             {[
-              'FDA Approved',
+              'India\'s Only PPS Oral',
               'IC / BPS',
               'Schedule H',
               'Oral + Intravesical',

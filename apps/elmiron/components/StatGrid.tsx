@@ -4,9 +4,9 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
 const stats = [
-  { num: '30+', label: 'Years of research' },
+  { num: '#1', label: "India's only oral PPS therapy" },
   { num: '100mg', label: 'Oral capsule strength' },
-  { num: '3×', label: 'Daily dosing' },
+  { num: '3–6', label: 'Months to clinical relief' },
   { num: '6+', label: 'Clinical indications' },
 ]
 

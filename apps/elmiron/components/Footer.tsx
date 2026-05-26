@@ -15,7 +15,7 @@ export function Footer() {
               Interstitial Cystitis / Bladder Pain Syndrome.
             </p>
             <p className="font-body text-[0.7rem] text-white/30 tracking-wide uppercase">
-              Manufactured by Swati Pentose Pvt Ltd
+              India's only oral PPS therapy for IC/BPS
             </p>
           </div>
 
@@ -72,7 +72,7 @@ export function Footer() {
           <p className="font-body text-[0.7rem] text-white/30 leading-relaxed max-w-2xl">
             Rx only. For use by licensed healthcare professionals only. This material is intended for
             healthcare professionals in India. Please refer to the full prescribing information.
-            © {new Date().getFullYear()} Swati Pentose Pvt Ltd. All rights reserved.
+            © {new Date().getFullYear()} Elmiron®. All rights reserved.
           </p>
           <div className="font-body text-[0.7rem] text-white/30 leading-relaxed">
             <a href="mailto:elmiron@elmiron.in" className="block hover:text-white transition-colors">
