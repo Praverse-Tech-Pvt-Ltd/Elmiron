@@ -4,10 +4,10 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
 const stats = [
-  { num: '#1', label: "India's only oral PPS therapy" },
-  { num: '100mg', label: 'Oral capsule strength' },
-  { num: '3–6', label: 'Months to clinical relief' },
-  { num: '6+', label: 'Clinical indications' },
+  { num: '35+', label: 'Years of global clinical use' },
+  { num: '54%', label: 'Patients reporting >50% improvement (Ali et al, 2011)' },
+  { num: '5/7', label: 'RCTs confirmed efficacy in IC/BPS' },
+  { num: '2,809', label: 'Patients in landmark long-term study (Hanno, 1997)' },
 ]
 
 export function StatGrid() {

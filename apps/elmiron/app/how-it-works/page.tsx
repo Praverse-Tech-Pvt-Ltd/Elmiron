@@ -76,11 +76,11 @@ export default function HowItWorksPage() {
             </h2>
             <dl className="space-y-4">
               {[
-                { term: 'Absorption', def: 'Poorly absorbed orally (~3–6%). Local action on urothelium is the primary mechanism.' },
-                { term: 'Distribution', def: 'Distributed primarily to the urothelium and liver. Binds to GAG-deficient areas of the bladder wall.' },
+                { term: 'Absorption', def: 'Poorly absorbed orally (~3–6%). Local action on urothelium is the primary mechanism, not systemic absorption.' },
+                { term: 'Distribution', def: 'Distributed primarily to the urothelium and liver. Binds to GAG-deficient areas of the bladder wall where protective repair is needed.' },
                 { term: 'Metabolism', def: 'Hepatic desulfation and depolymerization. Excreted primarily in urine and feces.' },
                 { term: 'Elimination', def: 'Half-life approximately 4.8 hours after oral dosing. Urinary excretion ~6% of dose.' },
-                { term: 'Onset', def: 'Clinical improvement typically observed at 3–6 months of continuous therapy.' },
+                { term: 'Onset', def: 'First signs of improvement typically at 5–10 weeks. Maximum clinical benefit observed at 3–6 months of continuous therapy, with benefit continuing to increase over 1–2 years in long-term use.' },
               ].map((item) => (
                 <div
                   key={item.term}
@@ -95,6 +95,80 @@ export default function HowItWorksPage() {
                 </div>
               ))}
             </dl>
+          </div>
+        </section>
+
+        {/* Clinical Evidence */}
+        <section className="bg-cream py-20 section-divider">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="mb-12">
+              <span className="inline-block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-sage-deep mb-3">
+                Clinical Evidence
+              </span>
+              <h2 className="font-display text-4xl font-light text-charcoal leading-tight max-w-xl">
+                35+ years of randomised controlled evidence
+              </h2>
+            </div>
+
+            {/* Key Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-14">
+              {[
+                { num: '7', label: 'Randomised Controlled Trials' },
+                { num: '5/7', label: 'RCTs confirmed clear efficacy' },
+                { num: '54%', label: 'Patients with >50% GRA improvement (Ali et al, 2011)' },
+                { num: '2,809', label: 'Patients in landmark open-label study (Hanno, 1997)' },
+              ].map((s) => (
+                <div key={s.num} className="bg-white p-6 border border-sage/20">
+                  <div className="font-display text-4xl font-light text-sage-deep mb-2">{s.num}</div>
+                  <div className="font-body text-[0.7rem] text-muted uppercase tracking-wide leading-relaxed">{s.label}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Key Studies */}
+            <div className="space-y-4">
+              {[
+                {
+                  author: 'Hanno PM (1997)',
+                  n: '2,809 patients',
+                  finding: '42–62% experienced moderate to significant symptom improvement. Response increased with duration — some patients reported benefit beyond 90 months of continuous use.',
+                },
+                {
+                  author: 'Al-Zahrani & Gajewski (2011)',
+                  n: '271 patients · 14-year follow-up',
+                  finding: '54.2% reported >50% improvement on Global Response Assessment (GRA). Efficacy was higher in patients who continued therapy beyond one year, and in patients with positive cystoscopic findings at baseline.',
+                },
+                {
+                  author: 'von Ophoven et al (2019)',
+                  n: 'Meta-analysis · 6 RCTs',
+                  finding: '"Unequivocally concluded that oral PPS is efficacious compared to placebo in the treatment of bladder pain, urinary urgency, and frequency of micturition." Benefit was even greater in the cystoscopy-confirmed subgroup.',
+                },
+                {
+                  author: 'Parsons & Mulholland (1987)',
+                  n: '62 patients',
+                  finding: 'Statistically significant improvement in subjective and objective parameters vs placebo. 80% of responders who restarted PPS after stopping had rapid return of symptom relief, confirming the drug\'s mechanism is reversible and reproducible.',
+                },
+                {
+                  author: 'Nickel JC et al (2005)',
+                  n: '380 patients · Dose-ranging study',
+                  finding: '~49.6% classified as responders at 300mg/day. Response was related to duration of therapy, not dose. All three doses (300, 600, 900 mg/day) showed significant ICSI score improvement at 32 weeks.',
+                },
+              ].map((study) => (
+                <div key={study.author} className="flex flex-col md:flex-row gap-6 bg-white p-8 border border-sage/20 hover:border-sage/40 transition-colors">
+                  <div className="flex-none md:w-56">
+                    <div className="font-display text-base font-light text-charcoal mb-1">{study.author}</div>
+                    <div className="font-body text-[0.65rem] text-sage-deep uppercase tracking-wide">{study.n}</div>
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-body text-sm text-muted leading-relaxed font-light">{study.finding}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <p className="font-body text-[0.68rem] text-muted/60 mt-8 leading-relaxed">
+              Sources: Taneja R. Current status of oral pentosan polysulphate in bladder pain syndrome/interstitial cystitis. Int Urogynecol J. 2020. DOI 10.1007/s00192-020-04517-9. Studies referenced are peer-reviewed publications in indexed urology and urogynecology journals.
+            </p>
           </div>
         </section>
       </main>

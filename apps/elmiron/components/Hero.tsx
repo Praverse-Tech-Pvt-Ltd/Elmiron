@@ -24,7 +24,7 @@ export function Hero() {
             variants={fadeUp}
             className="inline-block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-sage-deep mb-4"
           >
-             Prescription Therapy
+            India's Only Oral PPS Therapy
           </motion.span>
 
           <motion.h1
@@ -45,22 +45,24 @@ export function Hero() {
             variants={fadeUp}
             className="font-body text-base text-muted leading-relaxed mb-2 max-w-md font-light"
           >
-            Pentosan Polysulfate Sodium 100 mg — India's only oral therapy
-            approved for Interstitial Cystitis / Bladder Pain Syndrome (IC/BPS).
+            Pentosan Polysulfate Sodium 100 mg — the only oral medication
+            specifically approved for Interstitial Cystitis / Bladder Pain Syndrome (IC/BPS),
+            now available and affordable across India.
           </motion.p>
 
           <motion.p
             variants={fadeUp}
             className="font-body text-sm text-sage-deep leading-relaxed mb-4 max-w-md font-medium"
           >
-            Now accessible and affordable across India — prescribed by leading urologists.
+            Backed by 35+ years of global clinical evidence. 5 out of 7 randomised controlled trials
+            confirmed efficacy. Prescribed by leading urologists across India.
           </motion.p>
 
           {/* Badges */}
           <motion.div variants={fadeUp} className="flex flex-wrap gap-2 mb-8">
             {[
               'India\'s Only PPS Oral',
-              'IC / BPS',
+              'IC / BPS Approved',
               'Schedule H',
               'Oral + Intravesical',
             ].map((badge) => (

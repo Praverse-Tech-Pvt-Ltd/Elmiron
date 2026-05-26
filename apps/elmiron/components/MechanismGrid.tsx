@@ -7,17 +7,17 @@ const steps = [
   {
     num: '01',
     title: 'GAG Layer Restoration',
-    body: 'PPS adheres to the urothelium, replenishing the damaged glycosaminoglycan (GAG) layer that protects the bladder wall from irritants in urine.',
+    body: 'PPS is a synthetic polysaccharide and close analogue of the bladder\'s protective glycosaminoglycan (GAG) layer. It adheres to the urothelium, repairing the barrier that shields the bladder wall from urinary irritants.',
   },
   {
     num: '02',
     title: 'Anti-inflammatory Action',
-    body: 'Elmiron inhibits mast cell histamine release and reduces submucosal inflammation, breaking the pain-inflammation cycle in IC/BPS.',
+    body: 'Elmiron® inhibits mast cell histamine release and reduces submucosal inflammation, breaking the pain-inflammation cycle central to IC/BPS. Cystoscopic studies confirm reduction in mucosal redness, scarring, and hyperaemia.',
   },
   {
     num: '03',
-    title: 'Symptom Resolution',
-    body: 'With restored barrier function and reduced inflammation, patients experience relief from frequency, urgency, and pelvic pain over 3–6 months of therapy.',
+    title: 'Sustained Symptom Relief',
+    body: 'Clinical benefit is duration-dependent, not dose-dependent. Patients who responded showed improvement from 5–10 weeks, with benefit continuing to increase over 1–2 years. 80% of patients who restarted therapy after stopping experienced rapid symptom return.',
   },
 ]
 
