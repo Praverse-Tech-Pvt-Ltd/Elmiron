@@ -76,7 +76,7 @@ export default function FormulationsPage() {
         </section>
 
         {/* Safety */}
-        <section className="bg-charcoal py-20">
+        <section className="bg-charcoal py-20" data-nav-theme="dark">
           <div className="max-w-4xl mx-auto px-6">
             <h2 className="font-display text-3xl font-light text-white mb-8">
               Safety & Contraindications

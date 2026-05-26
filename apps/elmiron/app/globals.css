@@ -1,4 +1,4 @@
-﻿@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -11,6 +11,7 @@
   --color-sage-deep: #4a7a4a;
   --color-muted: #6b6b68;
   --border-color: rgba(138, 171, 138, 0.25);
+  --disclaimer-h: 32px;
 }
 
 @layer base {
@@ -27,11 +28,77 @@
     @apply font-display font-light;
   }
 
-  /* Thin borders throughout */
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: var(--color-cream); }
+  ::-webkit-scrollbar-thumb { background: var(--color-sage-light); border-radius: 0; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-sage); }
+
+  /* Focus ring */
+  *:focus-visible {
+    outline: 1.5px solid var(--color-sage);
+    outline-offset: 2px;
+  }
+
   .border-thin {
     border-width: 0.5px;
     border-color: rgba(138, 171, 138, 0.25);
   }
+}
+
+/* ── React Bits: SpotlightCard ────────────────────────── */
+.spotlight-card {
+  position: relative;
+  overflow: hidden;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  --spotlight-color: rgba(138, 171, 138, 0.18);
+}
+
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    200px circle at var(--mouse-x) var(--mouse-y),
+    var(--spotlight-color),
+    transparent 80%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+
+.spotlight-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── React Bits: ShinyText (CSS-only, zero JS) ────────── */
+@keyframes shiny-sweep {
+  0%   { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+.shiny-text {
+  background-image: linear-gradient(
+    100deg,
+    currentColor 0%,
+    currentColor 36%,
+    color-mix(in srgb, currentColor 20%, white 80%) 50%,
+    currentColor 64%,
+    currentColor 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shiny-sweep 5s linear infinite;
 }
 
 @layer components {
@@ -40,7 +107,21 @@
   }
 
   .disclaimer-bar {
-    @apply bg-charcoal text-white/60 text-[0.7rem] text-center py-2 tracking-wide;
+    @apply bg-charcoal text-white/60 text-[0.7rem] text-center tracking-wide;
+    height: var(--disclaimer-h);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 1rem;
+  }
+
+  /* Shared label style */
+  .label-eyebrow {
+    @apply inline-block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-sage-deep;
+  }
+
+  /* Section header spacing */
+  .section-header {
+    @apply mb-12 md:mb-16;
   }
 }
-

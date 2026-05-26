@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
@@ -20,6 +20,9 @@ const contacts = [
     email: 'elmiron@elmiron.in',
   },
 ]
+
+const inputClass =
+  'w-full bg-white/5 border border-white/12 text-white placeholder:text-white/20 font-body text-sm px-4 py-3 focus:outline-none focus:border-sage/60 focus:bg-white/8 transition-all duration-200'
 
 export function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
@@ -51,56 +54,69 @@ export function ContactForm() {
   }
 
   return (
-    <section id="contact" className="bg-charcoal py-24">
-      <div className="max-w-2xl mx-auto px-6">
+    <section id="contact" className="bg-charcoal py-20 md:py-24" data-nav-theme="dark">
+      <div className="max-w-2xl mx-auto px-5 md:px-8">
         <span className="inline-block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-sage-light mb-3">
           Medical Affairs
         </span>
         <h2 className="font-display text-4xl font-light text-white mb-2 leading-tight">
-          Contact 
+          Contact
         </h2>
-        <p className="font-body text-sm text-white/50 mb-10 font-light">
+        <p className="font-body text-sm text-white/50 mb-8 font-light leading-relaxed">
           For product enquiries, prescribing information, or medical information requests.
         </p>
 
-        <div className="grid grid-cols-1 gap-4 mb-10">
+        <div className="grid grid-cols-1 gap-3 mb-8">
           {contacts.map((contact) => (
             <a
               key={contact.email}
               href={`mailto:${contact.email}`}
-              className="block border border-white/10 bg-white/5 p-5 hover:border-sage/50 transition-colors"
+              className="flex items-center justify-between border border-white/10 bg-white/4 px-5 py-4 hover:border-sage/50 hover:bg-white/7 transition-all duration-200 group"
             >
-              <span className="block font-display text-xl font-light text-white mb-1">
-                {contact.name}
-              </span>
-              <span className="block font-body text-sm text-sage-light break-all">
-                {contact.email}
+              <div>
+                <span className="block font-display text-lg font-light text-white mb-0.5">
+                  {contact.name}
+                </span>
+                <span className="block font-body text-sm text-sage-light break-all">
+                  {contact.email}
+                </span>
+              </div>
+              <span className="font-body text-white/30 group-hover:text-sage-light group-hover:translate-x-1 transition-all duration-200 text-sm ml-4">
+                →
               </span>
             </a>
           ))}
         </div>
 
+        {/* Divider */}
+        <div className="flex items-center gap-4 mb-8">
+          <div className="flex-1 h-px bg-white/8" />
+          <span className="font-body text-[0.65rem] uppercase tracking-[0.15em] text-white/25">or send a message</span>
+          <div className="flex-1 h-px bg-white/8" />
+        </div>
+
         {status === 'success' ? (
           <div className="border border-sage/40 bg-sage/10 p-8 text-center">
+            <div className="w-8 h-px bg-sage/60 mx-auto mb-4" />
             <p className="font-display text-2xl font-light text-white mb-2">Thank you.</p>
-            <p className="font-body text-sm text-white/60">
+            <p className="font-body text-sm text-white/60 font-light">
               We've received your enquiry and will respond within 1 business day.
             </p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block font-body text-[0.7rem] tracking-[0.15em] uppercase text-white/40 mb-2">
                   Full Name *
                 </label>
                 <input
                   {...register('name')}
-                  className="w-full bg-white/5 border border-white/10 text-white placeholder:text-white/20 font-body text-sm px-4 py-3 focus:outline-none focus:border-sage/60 transition-colors"
+                  className={inputClass}
                   placeholder="Dr. Firstname Lastname"
                 />
                 {errors.name && (
-                  <p className="font-body text-[0.65rem] text-red-400 mt-1">{errors.name.message}</p>
+                  <p className="font-body text-[0.65rem] text-red-400 mt-1.5">{errors.name.message}</p>
                 )}
               </div>
               <div>
@@ -110,11 +126,11 @@ export function ContactForm() {
                 <input
                   {...register('email')}
                   type="email"
-                  className="w-full bg-white/5 border border-white/10 text-white placeholder:text-white/20 font-body text-sm px-4 py-3 focus:outline-none focus:border-sage/60 transition-colors"
+                  className={inputClass}
                   placeholder="doctor@hospital.in"
                 />
                 {errors.email && (
-                  <p className="font-body text-[0.65rem] text-red-400 mt-1">{errors.email.message}</p>
+                  <p className="font-body text-[0.65rem] text-red-400 mt-1.5">{errors.email.message}</p>
                 )}
               </div>
             </div>
@@ -125,7 +141,7 @@ export function ContactForm() {
               </label>
               <input
                 {...register('phone')}
-                className="w-full bg-white/5 border border-white/10 text-white placeholder:text-white/20 font-body text-sm px-4 py-3 focus:outline-none focus:border-sage/60 transition-colors"
+                className={inputClass}
                 placeholder="+91 XXXXX XXXXX"
               />
             </div>
@@ -137,35 +153,36 @@ export function ContactForm() {
               <textarea
                 {...register('message')}
                 rows={4}
-                className="w-full bg-white/5 border border-white/10 text-white placeholder:text-white/20 font-body text-sm px-4 py-3 focus:outline-none focus:border-sage/60 transition-colors resize-none"
+                className={`${inputClass} resize-none`}
                 placeholder="Your enquiry or question..."
               />
               {errors.message && (
-                <p className="font-body text-[0.65rem] text-red-400 mt-1">{errors.message.message}</p>
+                <p className="font-body text-[0.65rem] text-red-400 mt-1.5">{errors.message.message}</p>
               )}
             </div>
 
             {status === 'error' && (
               <div className="font-body text-[0.7rem] text-red-400 leading-relaxed">
                 Something went wrong. Please email{' '}
-                <a href="mailto:elmiron@elmiron.in" className="underline underline-offset-2">
+                <a href="mailto:elmiron@elmiron.in" className="underline underline-offset-2 hover:text-red-300 transition-colors">
                   elmiron@elmiron.in
                 </a>
                 .
               </div>
             )}
 
-            <button
-              type="submit"
-              disabled={status === 'loading'}
-              className="font-body text-sm px-8 py-3 bg-sage text-white hover:bg-sage-deep border border-sage hover:border-sage-deep transition-colors tracking-wide disabled:opacity-50"
-            >
-              {status === 'loading' ? 'Sending…' : 'Send Enquiry'}
-            </button>
+            <div className="pt-1">
+              <button
+                type="submit"
+                disabled={status === 'loading'}
+                className="font-body text-sm px-8 py-3 bg-sage text-white hover:bg-sage-deep border border-sage hover:border-sage-deep transition-colors duration-200 tracking-wide disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {status === 'loading' ? 'Sending…' : 'Send Enquiry'}
+              </button>
+            </div>
           </form>
         )}
       </div>
     </section>
   )
 }
-

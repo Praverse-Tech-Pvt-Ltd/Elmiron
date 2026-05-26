@@ -34,7 +34,7 @@ export default function IndicationsPage() {
         <IndicationsGrid />
 
         {/* Evidence note */}
-        <section className="bg-charcoal py-16">
+        <section className="bg-charcoal py-16" data-nav-theme="dark">
           <div className="max-w-4xl mx-auto px-6">
             <p className="font-body text-[0.75rem] text-white/30 leading-relaxed text-center max-w-2xl mx-auto">
               Use of Elmiron for conditions other than IC/BPS may be considered off-label in
