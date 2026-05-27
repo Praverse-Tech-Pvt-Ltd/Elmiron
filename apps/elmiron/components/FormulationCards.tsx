@@ -3,12 +3,15 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const formulations = [
   {
     type: 'Oral',
     name: 'Elmiron® Capsules',
     genericName: 'Pentosan Polysulfate Sodium',
+    image: '/elmiron.png',
+    imageAlt: 'Elmiron® Oral Capsules',
     specs: [
       { label: 'Strength', value: '100 mg' },
       { label: 'Form', value: 'Hard Gelatin Capsules' },
@@ -22,6 +25,8 @@ const formulations = [
     type: 'Intravesical',
     name: 'Elmiron® Solution',
     genericName: 'Pentosan Polysulfate Sodium',
+    image: '/elmiron-instill.png',
+    imageAlt: 'Elmiron® Intravesical Solution',
     specs: [
       { label: 'Strength', value: '50 mg/mL' },
       { label: 'Form', value: 'Sterile Instillation Solution' },
@@ -67,6 +72,25 @@ export function FormulationCards() {
               variants={fadeUp}
               className="bg-white p-7 md:p-8 border-t-[3px] border-sage border-l border-r border-b border-sage/20 flex flex-col"
             >
+              {/* Product image — full-bleed top panel */}
+              <div className="relative -mx-7 md:-mx-8 -mt-7 md:-mt-8 mb-7 bg-sage-pale/50 flex items-center justify-center overflow-hidden" style={{ height: '260px' }}>
+                <div
+                  className="absolute inset-0 opacity-20"
+                  style={{
+                    backgroundImage: 'radial-gradient(circle, rgba(74,122,74,0.3) 1px, transparent 1px)',
+                    backgroundSize: '20px 20px',
+                  }}
+                />
+                <Image
+                  src={f.image}
+                  alt={f.imageAlt}
+                  width={320}
+                  height={320}
+                  className="object-contain relative z-10 mix-blend-multiply"
+                  style={{ maxHeight: '230px', width: 'auto' }}
+                />
+              </div>
+
               {/* Badge */}
               <span className="inline-block self-start px-3 py-1 text-[0.65rem] font-body font-medium tracking-[0.15em] uppercase bg-sage-pale text-sage-deep border border-sage/30 mb-5">
                 {f.type}

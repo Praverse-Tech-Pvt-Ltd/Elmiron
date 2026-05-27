@@ -129,7 +129,6 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
           className="relative flex items-center justify-center bg-sage-pale/60 p-8 sm:p-12 lg:p-16 min-h-[360px] md:min-h-[480px] overflow-hidden"
         >
-          {/* Subtle dot grid texture */}
           <div
             className="absolute inset-0 opacity-30"
             style={{
@@ -137,16 +136,14 @@ export function Hero() {
               backgroundSize: '24px 24px',
             }}
           />
-          {/* Corner accent lines */}
           <div className="absolute top-4 left-4 w-6 h-6 border-t border-l border-sage/40" />
           <div className="absolute top-4 right-4 w-6 h-6 border-t border-r border-sage/40" />
           <div className="absolute bottom-4 left-4 w-6 h-6 border-b border-l border-sage/40" />
           <div className="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-sage/40" />
-
           <div className="relative">
             <Image
-              src="/elmiron-instill.png"
-              alt="Elmiron® — Pentosan Polysulfate Sodium 100mg"
+              src="/elmiron.png"
+              alt="Elmiron® — Pentosan Polysulfate Sodium 100mg Capsules"
               width={340}
               height={460}
               className="object-contain w-auto max-h-[420px] md:max-h-[460px] mix-blend-multiply"
