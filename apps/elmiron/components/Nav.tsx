@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 const navLinks = [
   { label: 'How It Works', href: '/how-it-works' },
   { label: 'Formulations', href: '/formulations' },
-  { label: 'Indications', href: '/indications' },
+  { label: 'Emerging', href: '/indications' },
 ]
 
 export function Nav() {
@@ -27,7 +27,6 @@ export function Nav() {
     if (!darkSections.length) return
 
     const navHeight = 64 // px — matches h-16
-    const disclaimerHeight = 32 // matches --disclaimer-h
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -37,7 +36,7 @@ export function Nav() {
       },
       {
         // Observe only the thin strip at the top where the nav lives
-        rootMargin: `-${disclaimerHeight}px 0px -${window.innerHeight - disclaimerHeight - navHeight}px 0px`,
+        rootMargin: `0px 0px -${window.innerHeight - navHeight}px 0px`,
         threshold: 0,
       }
     )
@@ -64,13 +63,13 @@ export function Nav() {
             : 'bg-cream/97 backdrop-blur-md shadow-[0_1px_0_rgba(138,171,138,0.2)]'
           : 'bg-transparent'
       }`}
-      style={{ top: 'var(--disclaimer-h)' }}
+      style={{ top: 0 }}
     >
       <div className="max-w-6xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
           <span className={`font-display text-xl font-light tracking-wide transition-all duration-300 group-hover:opacity-70 ${textPrimary}`}>
-            elmiron<sup className="text-[0.5em] opacity-60 ml-0.5">®</sup>
+            Elmiron<sup className="text-[0.5em] opacity-60 ml-0.5">®</sup>
           </span>
           <span className={`hidden lg:block text-[0.6rem] font-body tracking-[0.15em] uppercase border-l border-sage/30 pl-3 transition-colors duration-300 ${textMuted}`}>
             Pentosan Polysulfate Sodium

@@ -22,6 +22,7 @@ const config: Config = {
       fontFamily: {
         display: ['var(--font-cormorant)', 'serif'],
         body:    ['var(--font-dm-sans)', 'sans-serif'],
+        script:  ['var(--font-italiana)', 'serif'],
       },
       boxShadow: {
         'product': '20px 20px 60px rgba(74,122,74,0.12)',

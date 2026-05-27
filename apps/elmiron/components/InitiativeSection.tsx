@@ -23,7 +23,7 @@ export function InitiativeSection() {
                 Available in India
               </span>
               <h2 className="font-display text-4xl md:text-5xl font-light text-charcoal leading-tight mb-6">
-                India's only oral{' '}
+                India's best oral{' '}
                 <em className="italic text-sage-deep">PPS therapy</em> for IC/BPS
               </h2>
               <p className="font-body text-sm md:text-base text-muted leading-relaxed mb-4 font-light">

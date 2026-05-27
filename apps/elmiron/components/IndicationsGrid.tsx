@@ -68,7 +68,7 @@ export function IndicationsGrid({ indications = defaultIndications }: Indication
             Clinical Indications
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-light text-charcoal leading-tight max-w-lg">
-            Approved & emerging applications
+            Approved & *emerging applications
           </h2>
         </div>
 
@@ -94,7 +94,7 @@ export function IndicationsGrid({ indications = defaultIndications }: Indication
                   </span>
                 </div>
                 <h3 className="font-display text-lg font-light text-charcoal mb-2 leading-snug group-hover:text-sage-deep transition-colors duration-200">
-                  {indication.name}
+                  {i > 0 ? `*${indication.name}` : indication.name}
                 </h3>
                 <p className="font-body text-sm text-muted leading-relaxed font-light">
                   {indication.description}

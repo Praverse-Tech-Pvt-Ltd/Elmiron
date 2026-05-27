@@ -19,7 +19,7 @@ export function Hero() {
   return (
     <section
       className="min-h-[100svh] bg-cream flex items-center"
-      style={{ paddingTop: 'calc(var(--disclaimer-h) + 4rem)' }}
+      style={{ paddingTop: '4rem' }}
     >
       <div className="max-w-6xl mx-auto px-5 md:px-8 py-12 md:py-16 lg:py-20 w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         {/* Left — content */}
@@ -28,7 +28,7 @@ export function Hero() {
             variants={fadeUp}
             className="label-eyebrow shiny-text mb-4 block"
           >
-            India's Only Oral PPS Therapy
+            India's Best Oral PPS Therapy
           </motion.span>
 
           <motion.h1
@@ -36,6 +36,9 @@ export function Hero() {
             className="font-display text-[3.2rem] sm:text-5xl md:text-6xl font-light leading-[1.05] text-charcoal mb-2"
           >
             Elmiron<sup className="text-[0.4em] text-muted ml-1">®</sup>
+            <span className="font-script block text-[1.8rem] sm:text-[2.2rem] md:text-[2.6rem] text-sage-deep mt-1 font-normal tracking-widest">
+              for women
+            </span>
           </motion.h1>
 
           <motion.div variants={fadeUp}>
@@ -69,7 +72,7 @@ export function Hero() {
           {/* Badges */}
           <motion.div variants={fadeUp} className="flex flex-wrap gap-2 mb-7">
             {[
-              "India's Only PPS Oral",
+              "India's Best Oral PPS Therapy",
               'IC / BPS Approved',
               'Schedule H',
               'Oral + Intravesical',

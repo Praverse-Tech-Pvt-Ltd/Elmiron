@@ -20,7 +20,7 @@ export default function IndicationsPage() {
               Clinical Indications
             </span>
             <h1 className="font-display text-5xl md:text-6xl font-light text-charcoal leading-tight mb-6">
-              Approved & emerging<br />
+              Approved & *emerging<br />
               <em className="italic text-sage-deep">applications</em>
             </h1>
             <p className="font-body text-lg text-muted font-light leading-relaxed max-w-2xl">

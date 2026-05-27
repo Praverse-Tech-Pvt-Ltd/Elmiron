@@ -16,7 +16,7 @@ export function Footer() {
               Interstitial Cystitis / Bladder Pain Syndrome.
             </p>
             <p className="font-body text-[0.68rem] text-white/25 tracking-wide uppercase">
-              India's only oral PPS therapy for IC/BPS
+              India's best oral PPS therapy for IC/BPS
             </p>
           </div>
 
@@ -29,7 +29,7 @@ export function Footer() {
               {[
                 { label: 'How It Works', href: '/how-it-works' },
                 { label: 'Formulations', href: '/formulations' },
-                { label: 'Indications', href: '/indications' },
+                { label: 'Emerging', href: '/indications' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link

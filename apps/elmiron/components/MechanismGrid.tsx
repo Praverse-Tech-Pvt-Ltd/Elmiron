@@ -61,12 +61,14 @@ export function MechanismGrid() {
                 className="bg-white p-7 md:p-8 border border-sage/20 hover:border-sage/50 hover:-translate-y-1 transition-all duration-300 group h-full"
                 spotlightColor="rgba(138,171,138,0.15)"
               >
-                <span className="absolute top-4 right-5 font-display text-7xl font-light text-sage/8 select-none group-hover:text-sage/14 transition-colors duration-300">
-                  {step.num}
-                </span>
-                <span className="inline-block text-[0.65rem] font-body font-medium tracking-[0.15em] uppercase text-sage-deep mb-3">
-                  Step {step.num}
-                </span>
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="font-display text-5xl font-light text-sage/20 leading-none select-none group-hover:text-sage/35 transition-colors duration-300">
+                    {step.num}
+                  </span>
+                  <span className="text-[0.65rem] font-body font-medium tracking-[0.15em] uppercase text-sage-deep">
+                    Step {step.num}
+                  </span>
+                </div>
                 <h3 className="font-display text-xl font-light text-charcoal mb-3 leading-snug">
                   {step.title}
                 </h3>
