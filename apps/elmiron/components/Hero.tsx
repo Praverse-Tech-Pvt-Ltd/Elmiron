@@ -127,7 +127,7 @@ export function Hero() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
-          className="relative flex items-center justify-center bg-sage-pale/60 p-8 sm:p-12 lg:p-16 min-h-[360px] md:min-h-[480px] overflow-hidden"
+          className="relative hidden lg:flex items-center justify-center bg-sage-pale/60 p-8 sm:p-12 lg:p-16 min-h-[360px] md:min-h-[480px] overflow-hidden"
         >
           <div
             className="absolute inset-0 opacity-30"
