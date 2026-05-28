@@ -21,35 +21,27 @@ export function Nav() {
     return () => window.removeEventListener('scroll', handler)
   }, [])
 
-  // Detect when nav is over a dark-background section
   useEffect(() => {
     const darkSections = document.querySelectorAll('[data-nav-theme="dark"]')
     if (!darkSections.length) return
 
-    const navHeight = 64 // px — matches h-16
-
+    const navHeight = 64
     const observer = new IntersectionObserver(
-      (entries) => {
-        // Any dark section currently intersecting the nav band → go light
-        const anyDark = entries.some((e) => e.isIntersecting)
-        setIsDark(anyDark)
-      },
+      (entries) => setIsDark(entries.some((e) => e.isIntersecting)),
       {
-        // Observe only the thin strip at the top where the nav lives
         rootMargin: `0px 0px -${window.innerHeight - navHeight}px 0px`,
         threshold: 0,
-      }
+      },
     )
 
     darkSections.forEach((el) => observer.observe(el))
     return () => observer.disconnect()
   }, [])
 
-  // Text colours based on background beneath nav
-  const textMuted   = isDark ? 'text-white/60' : 'text-muted'
-  const textPrimary = isDark ? 'text-white'    : 'text-charcoal'
-  const textAccent  = isDark ? 'text-sage-light' : 'text-sage-deep'
-  const barColor    = isDark ? 'bg-white'      : 'bg-charcoal'
+  const textMuted = isDark ? 'text-white/60' : 'text-muted'
+  const textPrimary = isDark ? 'text-white' : 'text-charcoal'
+  const textAccent = isDark ? 'text-sage-light' : 'text-sage-deep'
+  const barColor = isDark ? 'bg-white' : 'bg-charcoal'
   const borderHover = isDark
     ? 'border-white/60 text-white hover:bg-white hover:text-charcoal'
     : 'border-charcoal/70 text-charcoal hover:bg-charcoal hover:text-white'
@@ -66,7 +58,6 @@ export function Nav() {
       style={{ top: 0 }}
     >
       <div className="max-w-6xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
-        {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
           <span className={`font-display text-xl font-light tracking-wide transition-all duration-300 group-hover:opacity-70 ${textPrimary}`}>
             Elmiron<sup className="text-[0.5em] opacity-60 ml-0.5">®</sup>
@@ -76,7 +67,6 @@ export function Nav() {
           </span>
         </Link>
 
-        {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-7 lg:gap-8">
           {navLinks.map((link) => (
             <Link
@@ -95,6 +85,14 @@ export function Nav() {
           >
             Disease Education ↗
           </a>
+          <a
+            href="https://polysacc.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`font-body text-sm tracking-wide whitespace-nowrap transition-colors duration-200 hover:opacity-100 ${textMuted}`}
+          >
+            polysacc.com ↗
+          </a>
           <Link
             href="/#contact"
             className={`font-body text-sm px-5 py-2 border whitespace-nowrap transition-all duration-200 tracking-wide ${borderHover}`}
@@ -103,7 +101,6 @@ export function Nav() {
           </Link>
         </div>
 
-        {/* Mobile hamburger */}
         <button
           className="md:hidden flex flex-col gap-[5px] p-2 -mr-1"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -116,7 +113,6 @@ export function Nav() {
         </button>
       </div>
 
-      {/* Mobile dropdown */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -125,9 +121,7 @@ export function Nav() {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
             className={`md:hidden overflow-hidden backdrop-blur-md border-t ${
-              isDark
-                ? 'bg-charcoal/97 border-white/10'
-                : 'bg-cream/97 border-sage/15'
+              isDark ? 'bg-charcoal/97 border-white/10' : 'bg-cream/97 border-sage/15'
             }`}
           >
             <div className="px-5 py-5 flex flex-col gap-1">
@@ -136,9 +130,7 @@ export function Nav() {
                   key={link.href}
                   href={link.href}
                   className={`font-body text-sm tracking-wide py-2.5 border-b last:border-0 transition-colors ${
-                    isDark
-                      ? 'text-white/70 border-white/8 hover:text-white'
-                      : 'text-charcoal border-sage/10 hover:text-sage-deep'
+                    isDark ? 'text-white/70 border-white/8 hover:text-white' : 'text-charcoal border-sage/10 hover:text-sage-deep'
                   }`}
                   onClick={() => setMenuOpen(false)}
                 >
@@ -155,6 +147,17 @@ export function Nav() {
                 onClick={() => setMenuOpen(false)}
               >
                 Disease Education ↗
+              </a>
+              <a
+                href="https://polysacc.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`font-body text-sm tracking-wide py-2.5 border-b transition-opacity hover:opacity-75 ${
+                  isDark ? 'text-white/70 border-white/8' : 'text-charcoal border-sage/10'
+                }`}
+                onClick={() => setMenuOpen(false)}
+              >
+                polysacc.com ↗
               </a>
               <Link
                 href="/#contact"
