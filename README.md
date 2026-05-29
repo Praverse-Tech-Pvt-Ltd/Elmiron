@@ -82,4 +82,4 @@ project/
 
 ## Contact
 
-The Company - elmiron@elmiron.in - +91 80972 53466
+The Company - isshane.guptaa@swatispentose.com / kanchan.londhe@swatispentose.com - +91 80972 53466

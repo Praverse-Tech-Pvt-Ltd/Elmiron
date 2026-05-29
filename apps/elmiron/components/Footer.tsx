@@ -91,30 +91,20 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link href="#contact" className="font-body text-sm text-white/60 hover:text-white transition-colors">
-                  Contact Medical Affairs
+                  Contact BD Head
                 </Link>
               </li>
               <li>
-                <a href="mailto:elmiron@elmiron.in" className="font-body text-sm text-white/60 hover:text-white transition-colors">
-                  elmiron@elmiron.in
+                <a href="mailto:isshane.guptaa@swatispentose.com" className="font-body text-sm text-white/60 hover:text-white transition-colors">
+                  isshane.guptaa@swatispentose.com
+                </a>
+              </li>
+              <li>
+                <a href="mailto:kanchan.londhe@swatispentose.com" className="font-body text-sm text-white/60 hover:text-white transition-colors">
+                  kanchan.londhe@swatispentose.com
                 </a>
               </li>
             </ul>
-
-            <div className="border-t border-sage/20 pt-4 mt-6">
-              <p className="font-body text-[0.68rem] text-white/40 tracking-wide uppercase mb-2">
-                CTO &amp; Promoter
-              </p>
-              <p className="font-body text-sm text-white/70 font-light mb-1">
-                Pratham Shrivastav
-              </p>
-              <a
-                href="mailto:pratham@polysacc.com"
-                className="font-body text-[0.78rem] text-sage hover:text-sage-light transition-colors"
-              >
-                pratham@polysacc.com
-              </a>
-            </div>
           </div>
         </div>
 
@@ -125,11 +115,11 @@ export function Footer() {
             © {new Date().getFullYear()} Polysaccharide Chemistry Pvt Ltd. All rights reserved.
           </p>
           <div className="font-body text-[0.7rem] text-white/30 leading-relaxed">
-            <a href="mailto:elmiron@elmiron.in" className="block hover:text-white transition-colors">
-              Medical Affairs · elmiron@elmiron.in
+            <a href="mailto:isshane.guptaa@swatispentose.com" className="block hover:text-white transition-colors">
+              Isshane Guptaa, BD Head · isshane.guptaa@swatispentose.com
             </a>
-            <a href="mailto:pratham@polysacc.com" className="block hover:text-white transition-colors">
-              CTO · pratham@polysacc.com
+            <a href="mailto:kanchan.londhe@swatispentose.com" className="block hover:text-white transition-colors">
+              Ms Kanchan Londhe · kanchan.londhe@swatispentose.com
             </a>
           </div>
         </div>

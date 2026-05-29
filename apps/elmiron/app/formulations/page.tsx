@@ -142,7 +142,7 @@ export default function FormulationsPage() {
             <p className="font-body text-[0.7rem] text-white/20 leading-relaxed">
               This information is a summary only. Please refer to the complete prescribing information
               for full safety data, drug interactions, and monitoring recommendations. Rx only.
-              For medical affairs enquiries: elmiron@elmiron.in
+              For BD Head enquiries: isshane.guptaa@swatispentose.com or kanchan.londhe@swatispentose.com
             </p>
           </div>
         </section>

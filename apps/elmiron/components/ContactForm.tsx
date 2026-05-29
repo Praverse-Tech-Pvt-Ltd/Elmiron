@@ -16,8 +16,12 @@ type FormData = z.infer<typeof schema>
 
 const contacts = [
   {
-    name: 'Medical Affairs',
-    email: 'elmiron@elmiron.in',
+    name: 'Isshane Guptaa, BD Head',
+    email: 'isshane.guptaa@swatispentose.com',
+  },
+  {
+    name: 'Ms Kanchan Londhe',
+    email: 'kanchan.londhe@swatispentose.com',
   },
 ]
 
@@ -57,7 +61,7 @@ export function ContactForm() {
     <section id="contact" className="bg-charcoal py-20 md:py-24" data-nav-theme="dark">
       <div className="max-w-2xl mx-auto px-5 md:px-8">
         <span className="inline-block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-sage-light mb-3">
-          Medical Affairs
+          BD Head
         </span>
         <h2 className="font-display text-4xl font-light text-white mb-2 leading-tight">
           Contact
@@ -164,8 +168,12 @@ export function ContactForm() {
             {status === 'error' && (
               <div className="font-body text-[0.7rem] text-red-400 leading-relaxed">
                 Something went wrong. Please email{' '}
-                <a href="mailto:elmiron@elmiron.in" className="underline underline-offset-2 hover:text-red-300 transition-colors">
-                  elmiron@elmiron.in
+                <a href="mailto:isshane.guptaa@swatispentose.com" className="underline underline-offset-2 hover:text-red-300 transition-colors">
+                  isshane.guptaa@swatispentose.com
+                </a>
+                {' '}or{' '}
+                <a href="mailto:kanchan.londhe@swatispentose.com" className="underline underline-offset-2 hover:text-red-300 transition-colors">
+                  kanchan.londhe@swatispentose.com
                 </a>
                 .
               </div>
