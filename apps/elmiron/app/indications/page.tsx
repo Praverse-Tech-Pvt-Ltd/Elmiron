@@ -4,9 +4,9 @@ import { Footer } from '@/components/Footer'
 import { IndicationsGrid } from '@/components/IndicationsGrid'
 
 export const metadata: Metadata = {
-  title: 'Indications',
+  title: 'Indications for Women',
   description:
-    'Clinical indications for Elmiron (Pentosan Polysulfate Sodium) including IC/BPS, radiation cystitis, and more.',
+    'Clinical indications for Elmiron (Pentosan Polysulfate Sodium) in women, including IC/BPS, radiation cystitis, and more.',
 }
 
 export default function IndicationsPage() {
@@ -17,7 +17,7 @@ export default function IndicationsPage() {
         <section className="bg-sage-pale py-24">
           <div className="max-w-4xl mx-auto px-6">
             <span className="inline-block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-sage-deep mb-4">
-              Clinical Indications
+              Clinical Indications for Women
             </span>
             <h1 className="font-display text-5xl md:text-6xl font-light text-charcoal leading-tight mb-6">
               Approved & *emerging<br />
@@ -25,8 +25,9 @@ export default function IndicationsPage() {
             </h1>
             <p className="font-body text-lg text-muted font-light leading-relaxed max-w-2xl">
               Elmiron® is the first and only FDA-approved oral therapy for Interstitial Cystitis /
-              Bladder Pain Syndrome, with emerging evidence supporting its use across a range of
-              urothelial conditions.
+              Bladder Pain Syndrome — a condition disproportionately affecting women — with
+              emerging evidence supporting its use across a range of urothelial conditions relevant
+              to women's health.
             </p>
           </div>
         </section>
@@ -38,8 +39,9 @@ export default function IndicationsPage() {
           <div className="max-w-4xl mx-auto px-6">
             <p className="font-body text-[0.75rem] text-white/30 leading-relaxed text-center max-w-2xl mx-auto">
               Use of Elmiron for conditions other than IC/BPS may be considered off-label in
-              some markets. Prescribers should review current evidence and regional regulatory
-              status. Full prescribing information available on request from Medical Affairs.
+              some markets. Prescribers evaluating women with these presentations should review
+              current evidence and regional regulatory status. Full prescribing information
+              available on request from Medical Affairs.
             </p>
           </div>
         </section>

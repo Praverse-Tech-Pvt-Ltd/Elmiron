@@ -34,7 +34,7 @@ const formulations = [
       { label: 'Pack', value: '4 Vials' },
       { label: 'Route', value: 'Intravesical' },
     ],
-    note: 'Administered by healthcare professional. Retain for minimum 30 minutes.',
+    note: 'Administered by a healthcare professional. Retain for a minimum of 30 minutes.',
   },
 ]
 
@@ -55,7 +55,7 @@ export function FormulationCards() {
             Available Formulations
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-light text-charcoal leading-tight">
-            Two routes, one goal
+            Two routes, one goal — relief for women with IC/BPS
           </h2>
         </div>
 

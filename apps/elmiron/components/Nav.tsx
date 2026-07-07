@@ -63,7 +63,7 @@ export function Nav() {
             Elmiron<sup className="text-[0.5em] opacity-60 ml-0.5">®</sup>
           </span>
           <span className={`hidden lg:block text-[0.6rem] font-body tracking-[0.15em] uppercase border-l border-sage/30 pl-3 transition-colors duration-300 ${textMuted}`}>
-            Pentosan Polysulfate Sodium
+            Pentosan Polysulfate Sodium for Women
           </span>
         </Link>
 

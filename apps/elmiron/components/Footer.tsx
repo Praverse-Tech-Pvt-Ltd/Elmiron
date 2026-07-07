@@ -12,10 +12,11 @@ export function Footer() {
             <div className="w-8 h-px bg-sage/40 mb-4" />
             <p className="font-body text-sm text-white/50 leading-relaxed mb-4 max-w-xs font-light">
               Pentosan Polysulfate Sodium 100mg. The only FDA-approved oral therapy for
-              Interstitial Cystitis / Bladder Pain Syndrome.
+              Interstitial Cystitis / Bladder Pain Syndrome — a condition that affects women at
+              far higher rates than men.
             </p>
             <p className="font-body text-[0.68rem] text-white/25 tracking-wide uppercase">
-              India's best oral PPS therapy for IC/BPS
+              India's best oral PPS therapy for women with IC/BPS
             </p>
 
             <div className="border-t border-sage/20 pt-4 mt-4">

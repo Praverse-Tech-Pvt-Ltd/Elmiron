@@ -17,32 +17,32 @@ const defaultIndications: Indication[] = [
   {
     name: 'Interstitial Cystitis / BPS',
     description:
-      'Primary indication. Chronic bladder condition causing pelvic pain, urgency, and frequency with no identifiable infection.',
+      'Primary indication. A chronic bladder condition, disproportionately affecting women, causing pelvic pain, urgency, and frequency with no identifiable infection.',
   },
   {
     name: 'Bladder Pain Syndrome',
     description:
-      'Suprapubic pain related to bladder filling, associated with at least one urinary symptom.',
+      'Suprapubic pain related to bladder filling, associated with at least one urinary symptom — common among women presenting with unresolved pelvic pain.',
   },
   {
     name: 'Radiation Cystitis',
     description:
-      'Bladder inflammation following pelvic radiotherapy. PPS aids mucosal repair and symptom relief.',
+      'Bladder inflammation following pelvic radiotherapy, including for gynaecological cancers. PPS aids mucosal repair and symptom relief.',
   },
   {
     name: 'Hemorrhagic Cystitis',
     description:
-      'Hematuria and bladder irritation from chemotherapy agents. Intravesical PPS may help restore barrier.',
+      'Hematuria and bladder irritation from chemotherapy agents. Intravesical PPS may help restore the protective barrier in affected women.',
   },
   {
     name: 'Overactive Bladder (adjunct)',
     description:
-      'Used adjunctively in OAB patients with co-existing urothelial dysfunction.',
+      'Used adjunctively in women with OAB who have co-existing urothelial dysfunction.',
   },
   {
     name: 'Recurrent UTI Prevention',
     description:
-      'GAG layer restoration may reduce bacterial adherence and prevent recurrent lower urinary tract infections.',
+      'GAG layer restoration may reduce bacterial adherence and help prevent recurrent lower urinary tract infections, which women experience far more frequently than men.',
   },
 ]
 
@@ -65,10 +65,10 @@ export function IndicationsGrid({ indications = defaultIndications }: Indication
       <div className="max-w-6xl mx-auto px-5 md:px-8">
         <div className="section-header">
           <span className="label-eyebrow shiny-text mb-3 block">
-            Clinical Indications
+            Clinical Indications for Women
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-light text-charcoal leading-tight max-w-lg">
-            Approved & *emerging applications
+            Approved & *emerging applications for women's bladder health
           </h2>
         </div>
 

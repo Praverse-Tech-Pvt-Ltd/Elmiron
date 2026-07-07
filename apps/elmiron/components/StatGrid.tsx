@@ -5,10 +5,10 @@ import { motion, useInView } from 'framer-motion'
 import { CountUp } from './ui/CountUp'
 
 const stats = [
-  { num: 35, suffix: '+', label: 'Years of global clinical use' },
-  { num: 54, suffix: '%', label: 'Patients reporting >50% improvement (Ali et al, 2011)' },
-  { display: '5/7', label: 'RCTs confirmed efficacy in IC/BPS' },
-  { num: 2809, suffix: '', label: 'Patients in landmark long-term study (Hanno, 1997)' },
+  { num: 35, suffix: '+', label: 'Years of global clinical use in women with IC/BPS' },
+  { num: 54, suffix: '%', label: 'Women reporting >50% improvement (Ali et al, 2011)' },
+  { display: '5/7', label: 'RCTs confirmed efficacy in women with IC/BPS' },
+  { num: 2809, suffix: '', label: 'Women in landmark long-term study (Hanno, 1997)' },
 ]
 
 export function StatGrid() {

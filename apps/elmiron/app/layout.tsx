@@ -26,24 +26,25 @@ const italiana = Italiana({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Elmiron',
-    template: '%s | Elmiron',
+    default: 'Elmiron for Women',
+    template: '%s | Elmiron for Women',
   },
   description:
-    'The only FDA-approved oral drug for Interstitial Cystitis / Bladder Pain Syndrome. Pentosan Polysulfate Sodium 100mg .',
+    'Elmiron for women with Interstitial Cystitis / Bladder Pain Syndrome — the only FDA-approved oral drug for a condition that affects women at 5-10x the rate of men. Pentosan Polysulfate Sodium 100mg.',
   keywords: [
+    'elmiron for women',
     'elmiron',
     'pentosan polysulfate sodium',
-    'interstitial cystitis',
-    'IC BPS treatment',
-    'bladder pain',
-    
+    'interstitial cystitis in women',
+    'IC BPS treatment for women',
+    'women bladder pain',
+    'female pelvic pain treatment',
   ],
   openGraph: {
     type: 'website',
     locale: 'en_IN',
     url: 'https://elmiron.in',
-    siteName: 'Elmiron',
+    siteName: 'Elmiron for Women',
   },
 }
 

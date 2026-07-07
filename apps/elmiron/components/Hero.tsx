@@ -28,7 +28,7 @@ export function Hero() {
             variants={fadeUp}
             className="label-eyebrow shiny-text mb-4 block"
           >
-            India's Best Oral PPS Therapy
+            India's Best Oral PPS Therapy for Women
           </motion.span>
 
           <motion.h1
@@ -57,22 +57,24 @@ export function Hero() {
             className="font-body text-sm md:text-base text-muted leading-relaxed mb-3 max-w-md font-light"
           >
             Pentosan Polysulfate Sodium 100 mg — the only oral medication
-            specifically approved for Interstitial Cystitis / Bladder Pain Syndrome (IC/BPS),
-            now available and affordable across India.
+            specifically approved for Interstitial Cystitis / Bladder Pain Syndrome (IC/BPS), a
+            condition that affects women at up to 5-10 times the rate of men, now available and
+            affordable across India.
           </motion.p>
 
           <motion.p
             variants={fadeUp}
             className="font-body text-sm text-sage-deep leading-relaxed mb-5 max-w-md font-medium"
           >
-            Backed by 35+ years of global clinical evidence. 5 out of 7 randomised controlled trials
-            confirmed efficacy. Prescribed by leading urologists across India.
+            Backed by 35+ years of global clinical evidence in women living with IC/BPS. 5 out of 7
+            randomised controlled trials confirmed efficacy. Prescribed by leading urologists and
+            urogynaecologists across India.
           </motion.p>
 
           {/* Badges */}
           <motion.div variants={fadeUp} className="flex flex-wrap gap-2 mb-7">
             {[
-              "India's Best Oral PPS Therapy",
+              "India's Best Oral PPS Therapy for Women",
               'IC / BPS Approved',
               'Schedule H',
               'Oral + Intravesical',

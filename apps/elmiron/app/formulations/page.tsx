@@ -4,9 +4,9 @@ import { Footer } from '@/components/Footer'
 import { FormulationCards } from '@/components/FormulationCards'
 
 export const metadata: Metadata = {
-  title: 'Formulations',
+  title: 'Formulations for Women with IC/BPS',
   description:
-    'Elmiron is available in two formulations: oral 100mg capsules and intravesical 50mg/mL solution.',
+    'Elmiron formulations for women with Interstitial Cystitis / Bladder Pain Syndrome: oral 100mg capsules and intravesical 50mg/mL solution.',
 }
 
 export default function FormulationsPage() {
@@ -26,8 +26,8 @@ export default function FormulationsPage() {
             </h1>
             <p className="font-body text-lg text-muted font-light leading-relaxed max-w-2xl">
               Elmiron® is available in two distinct formulations to suit the clinical needs of
-              your patient — oral capsules for systemic convenience, and intravesical solution for
-              direct bladder delivery.
+              women with IC/BPS — oral capsules for systemic convenience, and intravesical solution
+              for direct bladder delivery.
             </p>
           </div>
         </section>
@@ -68,7 +68,7 @@ export default function FormulationsPage() {
                   <strong className="text-charcoal font-medium">Frequency:</strong> Once weekly for 6 weeks (induction), then monthly (maintenance)
                 </p>
                 <p className="font-body text-sm text-muted leading-relaxed font-light">
-                  <strong className="text-charcoal font-medium">Retention:</strong> Patient should retain instillation for minimum 30 minutes.
+                  <strong className="text-charcoal font-medium">Retention:</strong> The patient should retain the instillation for a minimum of 30 minutes.
                 </p>
               </div>
             </div>
@@ -133,7 +133,8 @@ export default function FormulationsPage() {
                 A retinal eye examination (including fundoscopy) should be performed within
                 <strong className="text-white/80 font-medium"> 6 months of initiating therapy</strong> and
                 periodically during treatment. Advise patients to report any changes in vision — including
-                difficulty reading, trouble adapting to low light, or blurred/wavy eyesight — immediately.
+                difficulty reading, trouble adapting to low light, or blurred/wavy eyesight — immediately,
+              and ensure women on long-term therapy attend routine ophthalmologic review.
                 Maculopathy risk is cumulative and dose-dependent, typically associated with long-term
                 exposure (&gt;13 years or lifetime dose &gt;1,000 g).
               </p>

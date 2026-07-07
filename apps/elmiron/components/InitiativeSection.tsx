@@ -23,20 +23,20 @@ export function InitiativeSection() {
             </span>
             <h2 className="font-display text-4xl md:text-5xl font-light text-charcoal leading-tight mb-6">
               India's best oral{' '}
-              <em className="italic text-sage-deep">PPS therapy</em> for IC/BPS
+              <em className="italic text-sage-deep">PPS therapy</em> for women with IC/BPS
             </h2>
             <p className="font-body text-sm md:text-base text-muted leading-relaxed mb-4 font-light">
-              IC/BPS affects an estimated 3-8% of women in India, with many patients undiagnosed
-              or mismanaged as recurrent UTI. Elmiron® brings a PPS-focused therapy pathway to
-              this missed clinical space.
+              IC/BPS affects an estimated 3-8% of women in India, with many going undiagnosed
+              or mismanaged for years as recurrent UTI. Elmiron® brings a PPS-focused therapy pathway to
+              this missed clinical space for women.
             </p>
             <p className="font-body text-sm md:text-base text-muted leading-relaxed mb-4 font-light">
               As a pentosan polysulfate sodium formulation available in India, Elmiron® brings
-              decades of global clinical evidence directly to Indian patients.
+              decades of global clinical evidence directly to Indian women living with IC/BPS.
             </p>
             <p className="font-body text-sm md:text-base text-muted leading-relaxed mb-8 font-light">
               Supported by the Missed Bladder Disease initiative, led by Dr. Sanjay Pandey,
-              to close the diagnostic gap through IC/BPS education across India.
+              to close the diagnostic gap and improve recognition of IC/BPS in women across India.
             </p>
 
             <div className="flex flex-wrap gap-3">
@@ -67,7 +67,7 @@ export function InitiativeSection() {
               {[
                 { stat: '35+ years', label: 'of global clinical research and real-world use' },
                 { stat: '5 / 7 RCTs', label: 'randomised controlled trials confirmed clear efficacy in IC/BPS' },
-                { stat: '54.2%', label: 'of patients reported >50% improvement (GRA) in a 14-year follow-up study' },
+                { stat: '54.2%', label: 'of women reported >50% improvement (GRA) in a 14-year follow-up study' },
                 { stat: '42-62%', label: 'experienced moderate to significant symptom improvement (Hanno, 2,809 patients)' },
                 { stat: 'Unequivocal', label: 'von Ophoven 2019 meta-analysis conclusion on PPS efficacy vs placebo' },
               ].map((item) => (

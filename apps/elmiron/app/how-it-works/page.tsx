@@ -4,23 +4,23 @@ import { Footer } from '@/components/Footer'
 import { MechanismGrid } from '@/components/MechanismGrid'
 
 export const metadata: Metadata = {
-  title: 'Mechanism of Action',
+  title: 'Mechanism of Action for Women with IC/BPS',
   description:
-    'How Elmiron (Pentosan Polysulfate Sodium) works to restore the bladder GAG layer and relieve IC/BPS symptoms.',
+    'How Elmiron (Pentosan Polysulfate Sodium) works to restore the bladder GAG layer and relieve IC/BPS symptoms in women.',
 }
 
 const pathophysiologyPoints = [
   {
     title: 'Defective Urothelium',
-    body: 'In IC/BPS, the urothelial glycosaminoglycan (GAG) layer is damaged, allowing urinary solutes to penetrate the bladder wall, triggering inflammation and pain.',
+    body: 'In women with IC/BPS, the urothelial glycosaminoglycan (GAG) layer is damaged, allowing urinary solutes to penetrate the bladder wall, triggering inflammation and pain.',
   },
   {
     title: 'Mast Cell Activation',
-    body: 'Submucosally, mast cells release histamine and other inflammatory mediators, perpetuating the pain-inflammation cycle and causing detrusor muscle irritability.',
+    body: 'Submucosally, mast cells release histamine and other inflammatory mediators, perpetuating the pain-inflammation cycle and causing detrusor muscle irritability — a pattern seen disproportionately in women presenting with chronic pelvic pain.',
   },
   {
     title: 'Neural Sensitization',
-    body: 'Chronic inflammation sensitizes bladder afferent nerves, leading to central sensitization and amplified pain perception — hallmarks of IC/BPS.',
+    body: 'Chronic inflammation sensitizes bladder afferent nerves, leading to central sensitization and amplified pain perception — hallmarks of IC/BPS that make early recognition in women essential.',
   },
 ]
 
@@ -33,15 +33,16 @@ export default function HowItWorksPage() {
         <section className="bg-sage-pale py-24">
           <div className="max-w-4xl mx-auto px-6">
             <span className="inline-block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-sage-deep mb-4">
-              Mechanism of Action
+              Mechanism of Action for Women
             </span>
             <h1 className="font-display text-5xl md:text-6xl font-light text-charcoal leading-tight mb-6">
-              How Elmiron<sup className="text-[0.4em] text-muted ml-1">®</sup> works
+              How Elmiron<sup className="text-[0.4em] text-muted ml-1">®</sup> works for women
             </h1>
             <p className="font-body text-lg text-muted font-light leading-relaxed max-w-2xl">
               Elmiron (Pentosan Polysulfate Sodium) is a semi-synthetic heparin analog that acts
               locally on the bladder urothelium to restore the protective GAG layer, reduce
-              inflammation, and break the IC/BPS pain cycle.
+              inflammation, and break the IC/BPS pain cycle — a condition that predominantly
+              affects women.
             </p>
           </div>
         </section>
@@ -50,7 +51,7 @@ export default function HowItWorksPage() {
         <section className="bg-cream py-20 section-divider">
           <div className="max-w-6xl mx-auto px-6">
             <h2 className="font-display text-3xl font-light text-charcoal mb-10">
-              Understanding IC/BPS Pathophysiology
+              Understanding IC/BPS Pathophysiology in Women
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {pathophysiologyPoints.map((point, i) => (
@@ -106,7 +107,7 @@ export default function HowItWorksPage() {
                 Clinical Evidence
               </span>
               <h2 className="font-display text-4xl font-light text-charcoal leading-tight max-w-xl">
-                35+ years of randomised controlled evidence
+                35+ years of randomised controlled evidence in women
               </h2>
             </div>
 
@@ -115,8 +116,8 @@ export default function HowItWorksPage() {
               {[
                 { num: '7', label: 'Randomised Controlled Trials' },
                 { num: '5/7', label: 'RCTs confirmed clear efficacy' },
-                { num: '54%', label: 'Patients with >50% GRA improvement (Ali et al, 2011)' },
-                { num: '2,809', label: 'Patients in landmark open-label study (Hanno, 1997)' },
+                { num: '54%', label: 'Women with >50% GRA improvement (Ali et al, 2011)' },
+                { num: '2,809', label: 'Patients in landmark open-label study, predominantly women (Hanno, 1997)' },
               ].map((s) => (
                 <div key={s.num} className="bg-white p-6 border border-sage/20">
                   <div className="font-display text-4xl font-light text-sage-deep mb-2">{s.num}</div>
@@ -130,13 +131,13 @@ export default function HowItWorksPage() {
               {[
                 {
                   author: 'Hanno PM (1997)',
-                  n: '2,809 patients',
+                  n: '2,809 patients, predominantly women',
                   finding: '42–62% experienced moderate to significant symptom improvement. Response increased with duration — some patients reported benefit beyond 90 months of continuous use.',
                 },
                 {
                   author: 'Al-Zahrani & Gajewski (2011)',
                   n: '271 patients · 14-year follow-up',
-                  finding: '54.2% reported >50% improvement on Global Response Assessment (GRA). Efficacy was higher in patients who continued therapy beyond one year, and in patients with positive cystoscopic findings at baseline.',
+                  finding: '54.2% of women reported >50% improvement on Global Response Assessment (GRA). Efficacy was higher in those who continued therapy beyond one year, and in patients with positive cystoscopic findings at baseline.',
                 },
                 {
                   author: 'von Ophoven et al (2019)',

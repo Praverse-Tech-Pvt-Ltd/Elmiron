@@ -8,17 +8,17 @@ const steps = [
   {
     num: '01',
     title: 'GAG Layer Restoration',
-    body: 'PPS is a synthetic polysaccharide and close analogue of the bladder\'s protective glycosaminoglycan (GAG) layer. It adheres to the urothelium, repairing the barrier that shields the bladder wall from urinary irritants.',
+    body: 'In women with IC/BPS, the bladder\'s protective glycosaminoglycan (GAG) layer is often compromised. PPS is a synthetic polysaccharide and close analogue of this layer — it adheres to the urothelium, repairing the barrier that shields the bladder wall from urinary irritants.',
   },
   {
     num: '02',
     title: 'Anti-inflammatory Action',
-    body: 'Elmiron® inhibits mast cell histamine release and reduces submucosal inflammation, breaking the pain-inflammation cycle central to IC/BPS. Cystoscopic studies confirm reduction in mucosal redness, scarring, and hyperaemia.',
+    body: 'Elmiron® inhibits mast cell histamine release and reduces submucosal inflammation, breaking the pain-inflammation cycle central to IC/BPS in women. Cystoscopic studies confirm reduction in mucosal redness, scarring, and hyperaemia.',
   },
   {
     num: '03',
     title: 'Sustained Symptom Relief',
-    body: 'Clinical benefit is duration-dependent, not dose-dependent. Patients who responded showed improvement from 5–10 weeks, with benefit continuing to increase over 1–2 years. 80% of patients who restarted therapy after stopping experienced rapid symptom return.',
+    body: 'Clinical benefit is duration-dependent, not dose-dependent. Women who responded showed improvement from 5–10 weeks, with benefit continuing to increase over 1–2 years. 80% of women who restarted therapy after stopping experienced rapid symptom return.',
   },
 ]
 
@@ -44,7 +44,7 @@ export function MechanismGrid() {
             Mechanism of Action
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-light text-charcoal max-w-xl leading-tight">
-            How Elmiron<sup className="text-[0.5em] text-muted ml-1">®</sup> works
+            How Elmiron<sup className="text-[0.5em] text-muted ml-1">®</sup> works for women
           </h2>
         </div>
 

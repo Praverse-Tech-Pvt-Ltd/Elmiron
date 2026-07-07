@@ -67,7 +67,8 @@ export function ContactForm() {
           Contact
         </h2>
         <p className="font-body text-sm text-white/50 mb-8 font-light leading-relaxed">
-          For product enquiries, prescribing information, or medical information requests.
+          For product enquiries, prescribing information, or medical information requests
+          regarding Elmiron® for women with IC/BPS.
         </p>
 
         <div className="grid grid-cols-1 gap-3 mb-8">
