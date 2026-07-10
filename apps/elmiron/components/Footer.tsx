@@ -46,6 +46,7 @@ export function Footer() {
                 { label: 'How It Works', href: '/how-it-works' },
                 { label: 'Formulations', href: '/formulations' },
                 { label: 'Emerging', href: '/indications' },
+                { label: 'Elmiron Care (Patients)', href: '/elmiron-care' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link

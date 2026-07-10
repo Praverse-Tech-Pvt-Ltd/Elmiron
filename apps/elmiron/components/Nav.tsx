@@ -8,6 +8,7 @@ const navLinks = [
   { label: 'How It Works', href: '/how-it-works' },
   { label: 'Formulations', href: '/formulations' },
   { label: 'Emerging', href: '/indications' },
+  { label: 'Elmiron Care', href: '/elmiron-care' },
 ]
 
 export function Nav() {

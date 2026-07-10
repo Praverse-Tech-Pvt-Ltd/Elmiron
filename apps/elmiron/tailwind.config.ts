@@ -18,6 +18,11 @@ const config: Config = {
         cream:    '#f8f6f1',
         charcoal: '#2c2c2a',
         muted:    '#6b6b68',
+        clay: {
+          DEFAULT: '#b3583e',
+          pale:    '#f5e8e3',
+          deep:    '#8f4530',
+        },
       },
       fontFamily: {
         display: ['var(--font-cormorant)', 'serif'],
