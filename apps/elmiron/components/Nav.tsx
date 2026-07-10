@@ -63,12 +63,12 @@ export function Nav() {
           <span className={`font-display text-xl font-light tracking-wide transition-all duration-300 group-hover:opacity-70 ${textPrimary}`}>
             Elmiron<sup className="text-[0.5em] opacity-60 ml-0.5">®</sup>
           </span>
-          <span className={`hidden lg:block text-[0.6rem] font-body tracking-[0.15em] uppercase border-l border-sage/30 pl-3 transition-colors duration-300 ${textMuted}`}>
+          <span className={`hidden xl:block text-[0.6rem] font-body tracking-[0.15em] uppercase border-l border-sage/30 pl-3 transition-colors duration-300 ${textMuted}`}>
             Pentosan Polysulfate Sodium for Women
           </span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-7 lg:gap-8">
+        <div className="hidden lg:flex items-center gap-5 xl:gap-7">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -103,7 +103,7 @@ export function Nav() {
         </div>
 
         <button
-          className="md:hidden flex flex-col gap-[5px] p-2 -mr-1"
+          className="lg:hidden flex flex-col gap-[5px] p-2 -mr-1"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
@@ -121,7 +121,7 @@ export function Nav() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
-            className={`md:hidden overflow-hidden backdrop-blur-md border-t ${
+            className={`lg:hidden overflow-hidden backdrop-blur-md border-t ${
               isDark ? 'bg-charcoal/97 border-white/10' : 'bg-cream/97 border-sage/15'
             }`}
           >

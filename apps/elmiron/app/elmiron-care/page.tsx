@@ -152,34 +152,25 @@ export default function ElmironCarePage() {
                   </span>
                   <span className="text-clay">♥</span>
                 </div>
-                <p className="font-display text-xl font-light text-charcoal mb-4">Join Elmiron Care</p>
-                <div className="aspect-square w-full border border-sage/20 mb-4">
-                  <svg viewBox="0 0 100 100" width="100%" height="100%">
-                    <rect width="100" height="100" fill="#f8f6f1" />
-                    <g fill="#2c2c2a">
-                      <rect x="6" y="6" width="24" height="24" /><rect x="12" y="12" width="12" height="12" fill="#f8f6f1" /><rect x="16" y="16" width="4" height="4" fill="#2c2c2a" />
-                      <rect x="70" y="6" width="24" height="24" /><rect x="76" y="12" width="12" height="12" fill="#f8f6f1" /><rect x="80" y="16" width="4" height="4" fill="#2c2c2a" />
-                      <rect x="6" y="70" width="24" height="24" /><rect x="12" y="76" width="12" height="12" fill="#f8f6f1" /><rect x="16" y="80" width="4" height="4" fill="#2c2c2a" />
-                      <rect x="38" y="6" width="4" height="4" /><rect x="46" y="6" width="4" height="4" /><rect x="58" y="6" width="4" height="4" />
-                      <rect x="38" y="14" width="4" height="4" /><rect x="50" y="14" width="4" height="4" /><rect x="62" y="14" width="4" height="4" />
-                      <rect x="42" y="22" width="4" height="4" /><rect x="54" y="22" width="4" height="4" />
-                      <rect x="38" y="30" width="4" height="4" /><rect x="46" y="30" width="4" height="4" /><rect x="58" y="30" width="4" height="4" /><rect x="66" y="30" width="4" height="4" />
-                      <rect x="6" y="38" width="4" height="4" /><rect x="14" y="38" width="4" height="4" /><rect x="26" y="38" width="4" height="4" />
-                      <rect x="38" y="38" width="12" height="12" /><rect x="54" y="38" width="4" height="4" /><rect x="62" y="38" width="4" height="4" /><rect x="70" y="38" width="4" height="4" /><rect x="82" y="38" width="4" height="4" /><rect x="90" y="38" width="4" height="4" />
-                      <rect x="6" y="46" width="4" height="4" /><rect x="18" y="46" width="4" height="4" /><rect x="30" y="46" width="4" height="4" />
-                      <rect x="58" y="46" width="4" height="4" /><rect x="74" y="46" width="4" height="4" /><rect x="86" y="46" width="4" height="4" />
-                      <rect x="6" y="54" width="4" height="4" /><rect x="14" y="54" width="4" height="4" /><rect x="22" y="54" width="12" height="12" />
-                      <rect x="42" y="54" width="4" height="4" /><rect x="50" y="54" width="4" height="4" /><rect x="66" y="54" width="4" height="4" /><rect x="78" y="54" width="4" height="4" /><rect x="90" y="54" width="4" height="4" />
-                      <rect x="38" y="70" width="4" height="4" /><rect x="46" y="70" width="4" height="4" /><rect x="58" y="70" width="12" height="12" /><rect x="82" y="70" width="4" height="4" />
-                      <rect x="38" y="78" width="4" height="4" /><rect x="50" y="78" width="4" height="4" /><rect x="90" y="78" width="4" height="4" />
-                      <rect x="38" y="86" width="4" height="4" /><rect x="46" y="86" width="4" height="4" /><rect x="58" y="86" width="4" height="4" /><rect x="70" y="86" width="4" height="4" /><rect x="82" y="86" width="12" height="12" />
-                    </g>
-                  </svg>
-                </div>
-                <p className="font-body text-[0.72rem] text-muted leading-relaxed font-light">
-                  This pattern appears on your ELMIRON® pack insert. Prefer a real person? Call or
-                  WhatsApp us instead — see below.
+                <p className="font-display text-xl font-light text-charcoal mb-3">Join Elmiron Care</p>
+                <p className="font-body text-sm text-muted leading-relaxed font-light mb-5">
+                  Your all-access pass to the diet guide, bladder diary, daily checklist, and a
+                  support team that picks up the phone.
                 </p>
+                <ul className="space-y-2 mb-6">
+                  {['Free for as long as you take ELMIRON®', 'No forms beyond a phone call', 'Cancel anytime'].map((item) => (
+                    <li key={item} className="flex items-center gap-2.5 font-body text-[0.82rem] text-charcoal">
+                      <span className="w-4 h-4 flex-none rounded-full bg-sage-pale text-sage-deep flex items-center justify-center text-[0.6rem]">✓</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="#join"
+                  className="font-body text-sm px-5 py-2.5 bg-sage text-white hover:bg-sage-deep border border-sage hover:border-sage-deep transition-colors duration-200 tracking-wide inline-block"
+                >
+                  Enrol now
+                </a>
               </div>
             </div>
           </div>
