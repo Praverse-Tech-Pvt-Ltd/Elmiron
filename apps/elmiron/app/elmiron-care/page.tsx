@@ -55,10 +55,42 @@ const livingWellTips = [
 ]
 
 const videos = [
-  { title: 'What is IC/BPS?', body: "A urologist's plain-language walkthrough of symptoms, causes, and what a diagnosis does and doesn't mean." },
-  { title: 'How ELMIRON® helps', body: 'What the medication does, why it takes months to show effect, and how to stay consistent.' },
-  { title: 'Cooking bladder-friendly, Indian-style', body: 'A dietitian adapts everyday recipes to cut common triggers without losing flavour.' },
-  { title: 'Ask a urologist — patient Q&A', body: 'Real questions from the helpline, answered on camera.' },
+  {
+    youtubeId: 'q7D4lOzcdMs',
+    title: 'IC/BPS Introduction',
+    doctor: 'Dr. Raman Tanwar',
+    body: 'What IC/BPS looks like in real life — the diagnostic journey many patients go through before finding an answer.',
+  },
+  {
+    youtubeId: 'in-9ySuFlMQ',
+    title: 'Clinical Presentation of IC/BPS',
+    doctor: 'Dr. Rajesh Taneja',
+    body: 'How doctors distinguish IC/BPS from a urinary infection, and the symptom pattern that points to it.',
+  },
+  {
+    youtubeId: 'E89QxNSqLe0',
+    title: 'Diagnosis of IC/BPS',
+    doctor: 'Dr. Shivam Priyadarshi',
+    body: 'The tests used to rule out other causes and support a diagnosis — urine tests, imaging, and cystoscopy.',
+  },
+  {
+    youtubeId: 'ysGxoTn15Mo',
+    title: 'Treatment of IC/BPS',
+    doctor: 'Dr. Sanjay Pandey',
+    body: 'An overview of treatment options, from oral medication to pelvic floor therapy and surgical options.',
+  },
+  {
+    youtubeId: '3VJ_RKBPYgQ',
+    title: 'Pain Management in IC/BPS',
+    doctor: 'Dr. Navita Purohit',
+    body: 'Why pain management is a core part of IC/BPS care, and the therapies used alongside medication.',
+  },
+  {
+    youtubeId: 'rBzZ2e2iwvY',
+    title: 'Diet in IC/BPS',
+    doctor: 'Dr. Amita Jain',
+    body: 'How to identify your personal food triggers — the same elimination approach as our diet guide above.',
+  },
 ]
 
 export default function ElmironCarePage() {
@@ -525,26 +557,49 @@ export default function ElmironCarePage() {
                 Hear it explained, not just read it
               </h2>
               <p className="font-body text-sm text-muted leading-relaxed font-light">
-                Short videos from urologists and IC/BPS specialists, in the works for the Elmiron
-                Care library. New topics are added regularly.
+                Six short talks from the Induction Course for Patients, produced by the{' '}
+                <a
+                  href="https://gibsociety.com/induction-course-patients/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sage-deep hover:text-charcoal transition-colors"
+                >
+                  Global IC/BPS Bladder Pain Society (GIBS) ↗
+                </a>
+                . Each opens on YouTube in a new tab.
               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-6">
               {videos.map((v) => (
-                <div key={v.title} className="bg-white border border-sage/20">
-                  <div className="relative aspect-video bg-charcoal flex items-center justify-center">
-                    <span className="w-12 h-12 rounded-full border border-white/50 bg-white/10 flex items-center justify-center text-white text-sm pl-0.5">
-                      ▶
-                    </span>
-                    <span className="absolute top-3 right-3 bg-black/40 text-white font-body text-[0.62rem] tracking-[0.1em] uppercase px-3 py-1">
-                      Coming soon
+                <a
+                  key={v.youtubeId}
+                  href={`https://www.youtube.com/watch?v=${v.youtubeId}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white border border-sage/20 hover:border-sage transition-colors duration-200 group block"
+                >
+                  <div className="relative aspect-video bg-charcoal overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={`https://img.youtube.com/vi/${v.youtubeId}/hqdefault.jpg`}
+                      alt={`${v.title} — thumbnail`}
+                      className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-200"
+                    />
+                    <div className="absolute inset-0 bg-charcoal/25 group-hover:bg-charcoal/15 transition-colors duration-200 flex items-center justify-center">
+                      <span className="w-12 h-12 rounded-full border border-white/70 bg-black/30 flex items-center justify-center text-white text-sm pl-0.5">
+                        ▶
+                      </span>
+                    </div>
+                    <span className="absolute top-3 right-3 bg-black/50 text-white font-body text-[0.62rem] tracking-[0.1em] uppercase px-3 py-1">
+                      YouTube ↗
                     </span>
                   </div>
                   <div className="p-5">
-                    <h3 className="font-display text-base font-light text-charcoal mb-1.5">{v.title}</h3>
+                    <h3 className="font-display text-base font-light text-charcoal mb-1 group-hover:text-sage-deep transition-colors duration-200">{v.title}</h3>
+                    <p className="font-body text-[0.68rem] tracking-[0.08em] uppercase text-sage-deep mb-2">{v.doctor}</p>
                     <p className="font-body text-[0.82rem] text-muted leading-relaxed font-light">{v.body}</p>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
             <p className="font-body text-[0.78rem] text-muted/70">
